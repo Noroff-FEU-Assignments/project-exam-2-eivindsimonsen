@@ -3,6 +3,32 @@
   color: #ff385c;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  & > * {
+    margin: 0px 10px;
+  }
+
+  &-texts {
+    line-height: 23px;
+  }
+
+  &-name {
+    font-size: 1.8rem;
+  }
+
+  &-slogan {
+    color: $text-color;
+    font-size: 1rem;
+    margin-left: 2px;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+}
+
 a {
   text-decoration: none;
 }
