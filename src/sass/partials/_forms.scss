@@ -1,0 +1,52 @@
+// Universal form styles
+
+.input-error {
+  border-color: #ff385c;
+  background-color: lightcoral;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid black;
+  margin-bottom: 25px;
+  width: 300px;
+}
+
+textarea {
+  height: 200px;
+
+  @media (min-width: 780px) {
+    height: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Contact form styles
+
+.contact-form {
+  & > * {
+    margin: 0px 20px;
+  }
+
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-textarea {
+    display: flex;
+  }
+
+  &-button {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}

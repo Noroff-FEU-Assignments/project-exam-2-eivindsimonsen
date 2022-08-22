@@ -1,0 +1,35 @@
+.navbar-brand {
+  text-decoration: none !important;
+  color: #ff385c;
+}
+
+a {
+  text-decoration: none;
+}
+
+#no-active-link,
+.nav-link {
+  color: #484848 !important;
+}
+
+.active {
+  color: #ff385c !important;
+}
+
+footer {
+  background-color: $third-background;
+  padding: 50px;
+  margin-bottom: 50px;
+
+  &::after {
+    content: "Copyright © Eivind Studios";
+    background-color: $fourth-background;
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+    right: 0px;
+    left: 0px;
+    color: $main-background;
+    text-align: center;
+  }
+}

@@ -1,0 +1,44 @@
+#root {
+  //Style for sticking footer to bottom of the page
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+html,
+body {
+  font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  //Style for sticking footer to bottom of the page
+  height: 100%;
+}
+
+.wrapper {
+  // style for sticking footer to the bottom
+  flex: 1 0 auto;
+}
+
+footer {
+  //Style for sticking footer to bottom of the page
+  flex-shrink: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+.cta {
+  font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: $main-background;
+  margin-bottom: 30px;
+}
+
+.cta {
+  padding: 12px 24px;
+  background-color: $accent;
+  border: none;
+  border-radius: 5px;
+  color: $main-background;
+  margin-top: 10px;
+}
