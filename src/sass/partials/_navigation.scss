@@ -1,20 +1,32 @@
-.navbar-brand {
-  text-decoration: none !important;
-  color: #ff385c;
-}
-
+// Brand
 .brand {
   display: flex;
   align-items: center;
+
+  & > img {
+    width: 50%;
+    height: 50%;
+
+    @media (min-width: 1008px) {
+      width: 25%;
+      height: 25%;
+    }
+  }
+
   & > * {
     margin: 0px 10px;
   }
 
   &-texts {
+    display: none;
     line-height: 23px;
+    @media (min-width: 1008px) {
+      display: block;
+    }
   }
 
   &-name {
+    color: $accent;
     font-size: 1.8rem;
   }
 
@@ -29,33 +41,54 @@
   }
 }
 
+// Links
 a {
   text-decoration: none;
 }
 
-#no-active-link,
 .nav-link {
   color: #484848 !important;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+
+  &:hover {
+    color: $accent !important;
+    filter: brightness(85%);
+  }
 }
 
 .active {
   color: #ff385c !important;
 }
 
-footer {
-  background-color: $third-background;
-  padding: 50px;
-  margin-bottom: 50px;
+// Search bar
 
-  &::after {
-    content: "Copyright © Eivind Studios";
-    background-color: $fourth-background;
-    position: absolute;
-    bottom: 0px;
-    padding: 20px;
-    right: 0px;
-    left: 0px;
-    color: $main-background;
-    text-align: center;
+.search-bar {
+  position: relative;
+  margin: 0px auto;
+
+  &-input {
+    padding: 10px 20px;
+    width: 100%;
+
+    @media (min-width: 1492px) {
+      width: 400px;
+    }
   }
+}
+
+.fa-magnifying-glass {
+  font-size: 1.5rem;
+  color: $accent;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
+// Icons
+.nav-icons i {
+  font-size: 1.9rem;
 }

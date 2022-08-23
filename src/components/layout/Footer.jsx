@@ -3,7 +3,7 @@ import Heading from "./Heading";
 
 function Footer() {
   return (
-    <footer id="footer">
+    <footer>
       <h4>
         <Heading title="Reach out to us!" />
       </h4>

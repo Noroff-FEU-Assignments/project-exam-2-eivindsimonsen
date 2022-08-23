@@ -11,8 +11,6 @@ function ContactForm() {
     console.log(data);
   }
 
-  console.log(errors);
-
   const firstName = document.querySelector(".firstName");
   const email = document.querySelector(".email");
   const subject = document.querySelector(".subject");
