@@ -7,7 +7,7 @@
     width: 50%;
     height: 50%;
 
-    @media (min-width: 1008px) {
+    @media (min-width: 1044px) {
       width: 25%;
       height: 25%;
     }
@@ -20,7 +20,7 @@
   &-texts {
     display: none;
     line-height: 23px;
-    @media (min-width: 1008px) {
+    @media (min-width: 1044px) {
       display: block;
     }
   }
@@ -48,15 +48,19 @@ a {
 
 .nav-link {
   color: #484848 !important;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 10px;
 
   &:hover {
     color: $accent !important;
     filter: brightness(85%);
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 1.2rem;
+    margin: 0px 10px;
   }
 }
 
@@ -65,14 +69,16 @@ a {
 }
 
 // Search bar
-
 .search-bar {
   position: relative;
-  margin: 0px auto;
+  margin: 20px auto 0px auto;
 
   &-input {
     padding: 10px 20px;
     width: 100%;
+    border: 1.5px solid $third-background;
+    /* box-shadow: var(--shadow-elevation-medium); */
+    @include shadow-elevation-medium;
 
     @media (min-width: 1492px) {
       width: 400px;
@@ -90,5 +96,5 @@ a {
 
 // Icons
 .nav-icons i {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }

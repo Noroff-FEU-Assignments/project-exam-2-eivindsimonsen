@@ -5,3 +5,23 @@ $text-color: #484848;
 $secondary-background: #dddddd;
 $third-background: #3d3e47;
 $fourth-background: #313239;
+$error-color: #f5c2c7;
+
+// Shadows hsl code
+$shadow-color-main: 0deg 0% 63%;
+$shadow-color-accent: 350deg 84% 36%;
+$shadow-color-third: 234deg 11% 13%;
+$shadow-color-fourth: 233deg 11% 9%;
+$shadow-color-text: 0deg 0% 15%;
+
+@mixin shadow-elevation-low {
+  box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 63% / 0.34), 0.4px 0.8px 1px -1.2px hsl(0deg 0% 63% / 0.34), 1px 2px 2.5px -2.5px hsl(0deg 0% 63% / 0.34);
+}
+
+@mixin shadow-elevation-medium {
+  box-shadow: 0.3px 0.5px 0.5px hsl(0deg 0% 63% / 0.54), 0.6px 1.2px 1.3px -1.2px hsl(0deg 0% 63% / 0.45), 1.9px 3.7px 3.9px -2.5px hsl(0deg 0% 63% / 0.36), 5px 10px 10.5px -3.7px hsl(0deg 0% 63% / 0.27);
+}
+
+@mixin shadow-elevation-high {
+  box-shadow: 0.3px 0.5px 0.5px hsl(0deg 0% 63% / 0.5), 0.9px 1.8px 1.9px -0.5px hsl(0deg 0% 63% / 0.46), 1.8px 3.5px 3.7px -1.1px hsl(0deg 0% 63% / 0.42), 3.3px 6.7px 7px -1.6px hsl(0deg 0% 63% / 0.38), 6px 12px 12.6px -2.1px hsl(0deg 0% 63% / 0.34), 10.2px 20.4px 21.4px -2.7px hsl(0deg 0% 63% / 0.29), 16.4px 32.8px 34.4px -3.2px hsl(0deg 0% 63% / 0.25), 25px 50px 52.4px -3.7px hsl(0deg 0% 63% / 0.21);
+}

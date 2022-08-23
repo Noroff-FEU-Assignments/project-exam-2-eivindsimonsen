@@ -35,7 +35,7 @@ function Layout() {
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="navbarScroll">
                 <Form className="d-flex search-bar">
-                  <Form.Control type="search" id="search" placeholder="Search" className="me-2 search-bar-input" aria-label="Search" />
+                  <Form.Control type="search" id="search" placeholder="Search acommodation" className="me-2 search-bar-input" aria-label="Search" />
                   <label htmlFor="search">
                     <i className="fa-solid fa-magnifying-glass"></i>
                   </label>

@@ -46,19 +46,27 @@ function ContactForm() {
   return (
     <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <div className="contact-form-inputs">
-        <input type="text" placeholder="First name" className="firstName" {...register("firstName", { required: true, min: 1 })} />
-        {errors.firstName && null}
+        <div className="contact-form-inputs--icon">
+          <i className="fa-solid fa-user form-icons"></i>
+          <input type="text" placeholder="First name" className="firstName" {...register("firstName", { required: true, min: 1 })} />
+          {errors.firstName && <span>Name is required</span>}
+        </div>
+        <div className="contact-form-inputs--icon">
+          <i className="fa-solid fa-envelope form-icons"></i>
+          <input type="text" placeholder="Email" className="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+          {errors.email && <span>Name is required</span>}
+        </div>
 
-        <input type="text" placeholder="Email" className="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-        {errors.email && null}
-
-        <input type="text" placeholder="Subject" className="subject" {...register("subject", { required: true, min: 1 })} />
-        {errors.subject && null}
+        <div className="contact-form-inputs--icon">
+          <i className="fa-solid fa-file-lines form-icons"></i>
+          <input type="text" placeholder="Subject" className="subject" {...register("subject", { required: true, min: 1 })} />
+          {errors.subject && <span>Name is required</span>}
+        </div>
       </div>
 
       <div className="contact-form-textarea">
         <textarea placeholder="Message" className="message" {...register("message", { required: true, min: 1 })} />
-        {errors.message && null}
+        {errors.message && <span>Name is required</span>}
       </div>
 
       <div className="contact-form-button">

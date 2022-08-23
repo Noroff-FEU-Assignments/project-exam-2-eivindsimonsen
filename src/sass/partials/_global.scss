@@ -24,22 +24,23 @@ footer {
   flex-shrink: 0;
   background-color: $third-background;
   padding: 50px;
-  margin-bottom: 50px;
-
-  &::after {
-    content: "Copyright © Eivind Studios";
-    background-color: $fourth-background;
-    position: absolute;
-    bottom: 0px;
-    padding: 20px;
-    right: 0px;
-    left: 0px;
-    color: $main-background;
-    text-align: center;
-  }
 
   & > h4 {
     color: $main-background;
+  }
+}
+
+.bottom-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $fourth-background;
+  padding: 20px 0px;
+  color: $main-background;
+
+  & > h5 {
+    color: $main-background;
+    margin: auto;
   }
 }
 

@@ -1,8 +1,9 @@
 // Universal form styles
 
 .input-error {
-  border-color: #ff385c;
-  background-color: lightcoral;
+  border: 1.5px solid $accent;
+  background-color: $error-color;
+  margin-bottom: 0px;
 }
 
 input,
@@ -12,14 +13,11 @@ textarea {
   border: 1px solid black;
   margin-bottom: 25px;
   width: 300px;
+  border: 1.5px solid $third-background;
 }
 
 textarea {
-  height: 200px;
-
-  @media (min-width: 780px) {
-    height: auto;
-  }
+  height: 191px;
 }
 
 form {
@@ -29,10 +27,17 @@ form {
 }
 
 // Contact form styles
-
 .contact-form {
   & > * {
     margin: 0px 20px;
+  }
+
+  &-inputs,
+  &-textarea {
+    & span {
+      color: $main-background;
+      margin-bottom: 15px;
+    }
   }
 
   &-inputs {
@@ -42,6 +47,7 @@ form {
 
   &-textarea {
     display: flex;
+    flex-direction: column;
   }
 
   &-button {
@@ -49,4 +55,20 @@ form {
     flex-basis: 100%;
     justify-content: center;
   }
+}
+
+.contact-form-inputs--icon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+// Form icons
+.form-icons {
+  font-size: 1.4rem;
+  color: $accent;
+  position: absolute;
+  bottom: 38px;
+  right: 0px;
+  margin: auto 20px;
 }
