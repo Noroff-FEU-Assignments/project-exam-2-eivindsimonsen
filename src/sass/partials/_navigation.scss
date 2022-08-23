@@ -76,12 +76,18 @@ a {
   &-input {
     padding: 10px 20px;
     width: 100%;
-    border: 1.5px solid $third-background;
-    /* box-shadow: var(--shadow-elevation-medium); */
+    border: 1.5px solid $fourth-background;
     @include shadow-elevation-medium;
+    transition: 0.5s;
 
     @media (min-width: 1492px) {
       width: 400px;
+    }
+
+    &:hover {
+      @include shadow-elevation-high;
+      padding: 10px 27px;
+      transition: 0.5s;
     }
   }
 }
