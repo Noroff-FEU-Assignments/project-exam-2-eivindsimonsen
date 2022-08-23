@@ -11,6 +11,7 @@ import Explore from "../pages/explore/Explore";
 import Login from "../pages/login/Login";
 import Admin from "../pages/admin/Admin";
 import Enquiries from "../pages/enquiries/Enquiries";
+import AccommodationDetails from "../pages/specific/AccommodationDetails";
 
 import Footer from "./Footer";
 
@@ -67,6 +68,7 @@ function Layout() {
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/enquiries" element={<Enquiries />} />
+            <Route path="/accommodationdetails" element={<AccommodationDetails />} />
           </Routes>
         </Router>
       </div>
