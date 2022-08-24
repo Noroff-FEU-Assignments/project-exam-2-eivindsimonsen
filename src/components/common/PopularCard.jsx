@@ -28,7 +28,10 @@ function PopularCard() {
           <div className="popular-card-price-booking">
             <p>$42/day</p>
             <NavLink to="/explore" className="cta">
-              Book
+              <div>Read more</div>
+              <div className="cta-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
             </NavLink>
           </div>
         </div>

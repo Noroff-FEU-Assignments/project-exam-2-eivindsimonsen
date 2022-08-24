@@ -71,7 +71,10 @@ function ContactForm() {
 
       <div className="contact-form-button">
         <button type="submit" className="cta">
-          Send
+          <div>Send</div>
+          <div className="cta-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
         </button>
       </div>
     </form>
