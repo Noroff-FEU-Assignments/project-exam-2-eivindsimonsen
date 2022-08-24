@@ -10,7 +10,6 @@
 
   &:hover {
     border-radius: 20px;
-    width: 365px;
     @include shadow-elevation-high;
     transition: 0.3s;
   }
@@ -68,4 +67,4 @@
   }
 }
 
-// ------------ Message cards ------------
+// ------------ Feedback cards ------------

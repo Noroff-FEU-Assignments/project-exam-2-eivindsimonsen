@@ -1,5 +1,5 @@
 import placeholder from "../../images/hotel.jpg";
-import Heading from "../layout/Heading";
+import { HeadingThree } from "../layout/Headings";
 import { NavLink } from "react-router-dom";
 
 function PopularCard() {
@@ -11,9 +11,7 @@ function PopularCard() {
         </div>
         <div className="popular-card-details">
           <div className="popular-card-name">
-            <h3>
-              <Heading title="Farm B & B" />
-            </h3>
+            <HeadingThree title="Farm B & B" />
             <p>A fine farm for B&B</p>
           </div>
           <div className="popular-card-feature">

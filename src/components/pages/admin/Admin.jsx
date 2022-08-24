@@ -1,11 +1,7 @@
-import Heading from "../../layout/Heading";
+import { HeadingOne } from "../../layout/Headings";
 
 function Admin() {
-  return (
-    <h1>
-      <Heading title="Admin" />
-    </h1>
-  );
+  return <HeadingOne title="Admin" />;
 }
 
 export default Admin;

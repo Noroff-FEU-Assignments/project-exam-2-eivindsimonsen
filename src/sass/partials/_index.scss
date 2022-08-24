@@ -1,19 +1,94 @@
-// ------------ Popular section------------
-#popular-visits {
+// ------------ Index ------------
+#popular-visits,
+#feedback-messages {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 60px;
 
-  & > h2 {
+  & > h2,
+  h3 {
     flex-basis: 100%;
   }
 }
 
+// ------------ Popular section ------------
 .explore-more {
   text-align: center;
   margin-bottom: 100px;
 }
 
-// ------------ Messages section------------
+// ------------ Feedback section ------------
+#feedback-messages {
+  background-color: $secondary-background;
+  padding: 60px 0px;
+}
 
-// ------------ Carousel section------------
+.feedback-position {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 1400px) {
+    flex-direction: row;
+    gap: 100px;
+  }
+}
+
+.feedback {
+  display: flex;
+
+  &-box {
+    margin: 20px auto;
+  }
+
+  &-box-user {
+    width: 150px;
+    height: 150px;
+    background-color: $main-background;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+
+    & > .fa-user {
+      font-size: 4rem;
+      position: absolute;
+      bottom: 45px;
+      left: 50px;
+      color: $text-color;
+    }
+
+    @media (min-width: 992px) {
+      width: 200px;
+      height: 200px;
+
+      & > .fa-user {
+        font-size: 6rem;
+        position: absolute;
+        bottom: 55px;
+        left: 60px;
+        color: $text-color;
+      }
+    }
+  }
+
+  &-box-info {
+    max-width: 300px;
+
+    @media (min-width: 576px) {
+      max-width: 500px;
+    }
+  }
+
+  &-user-location {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 40px;
+
+    & span {
+      font-size: 1.4rem;
+      color: $accent;
+    }
+  }
+}
+
+// ------------ Carousel section ------------

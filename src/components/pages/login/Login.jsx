@@ -1,11 +1,7 @@
-import Heading from "../../layout/Heading";
+import { HeadingOne } from "../../layout/Headings";
 
 function Login() {
-  return (
-    <h1>
-      <Heading title="Login" />
-    </h1>
-  );
+  return <HeadingOne title="Login" />;
 }
 
 export default Login;

@@ -1,11 +1,7 @@
-import Heading from "../../layout/Heading";
+import { HeadingOne } from "../../layout/Headings";
 
 function Enquiries() {
-  return (
-    <h1>
-      <Heading title="Enquiries" />
-    </h1>
-  );
+  return <HeadingOne title="Enquiries" />;
 }
 
 export default Enquiries;

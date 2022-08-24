@@ -1,15 +1,11 @@
-import Heading from "../layout/Heading";
+import { HeadingOne, HeadingTwo } from "../layout/Headings";
 
 function Banner({ bannerclass, h1, h2 }) {
   return (
     <div className={bannerclass}>
       <div className="banner-heading">
-        <h1>
-          <Heading title={h1} />
-        </h1>
-        <h2>
-          <Heading title={h2} />
-        </h2>
+        <HeadingOne title={h1} />
+        <HeadingTwo title={h2} />
       </div>
     </div>
   );

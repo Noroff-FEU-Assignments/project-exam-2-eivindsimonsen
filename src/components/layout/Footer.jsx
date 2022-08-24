@@ -1,19 +1,15 @@
 import ContactForm from "../forms/ContactForm";
-import Heading from "./Heading";
+import { HeadingFour, HeadingFive } from "./Headings";
 
 function Footer() {
   return (
     <section id="footer">
       <footer>
-        <h4>
-          <Heading title="Reach out to us!" />
-        </h4>
+        <HeadingFour title="Reach out to us!" />
         <ContactForm />
       </footer>
       <div className="bottom-footer">
-        <h5>
-          <Heading title="Copyright © Eivind Studios" />
-        </h5>
+        <HeadingFive title="Copyright © Eivind Studios" />
       </div>
     </section>
   );
