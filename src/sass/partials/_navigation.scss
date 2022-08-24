@@ -1,4 +1,4 @@
-// Brand
+// ------------ Brand ------------
 .brand {
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
   }
 }
 
-// Links
+// ------------ Links ------------
 a {
   text-decoration: none;
 }
@@ -68,7 +68,7 @@ a {
   color: #ff385c !important;
 }
 
-// Search bar
+// ------------ Nav search bar ------------
 .search-bar {
   position: relative;
   margin: 20px auto 0px auto;
@@ -78,9 +78,13 @@ a {
     width: 100%;
     border: 1.5px solid $fourth-background;
     @include shadow-elevation-medium;
-    transition: 0.5s;
+    transition: padding 0.5s, box-shadow 0.5s;
 
-    @media (min-width: 1492px) {
+    @media (min-width: 992px) and (max-width: 1044px) {
+      width: 400px;
+    }
+
+    @media (min-width: 1400px) {
       width: 400px;
     }
 
@@ -100,7 +104,7 @@ a {
   top: 12px;
 }
 
-// Icons
+// ------------ Nav icons ------------
 .nav-icons i {
   font-size: 1.7rem;
 }

@@ -1,0 +1,19 @@
+// ------------ Popular section------------
+#popular-visits {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+
+  & > h2 {
+    flex-basis: 100%;
+  }
+}
+
+.explore-more {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+// ------------ Messages section------------
+
+// ------------ Carousel section------------

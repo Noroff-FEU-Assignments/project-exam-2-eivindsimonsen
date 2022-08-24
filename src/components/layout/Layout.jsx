@@ -22,46 +22,48 @@ function Layout() {
     <>
       <div className="wrapper">
         <Router>
-          <Container>
-            <Navbar expand="lg">
-              <NavLink to="/">
-                <Navbar.Brand className="brand">
-                  <img src={holidazeLogo} alt="Holidaze logo" />
-                  <div className="brand-texts">
-                    <div className="brand-name">Holidaze</div>
-                    <div className="brand-slogan">Hotels, B&B and guesthouses</div>
-                  </div>
-                </Navbar.Brand>
-              </NavLink>
-              <Navbar.Toggle aria-controls="navbarScroll" />
-              <Navbar.Collapse id="navbarScroll">
-                <Form className="d-flex search-bar">
-                  <Form.Control type="search" id="search" placeholder="Search acommodation" className="me-2 search-bar-input" aria-label="Search" />
-                  <label htmlFor="search">
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                  </label>
-                </Form>
-                <Nav className="me-auto my-2 my-lg-0 nav-icons" navbarScroll>
-                  <NavLink to="/" className="nav-link">
-                    <i className="fa-solid fa-house"></i>
-                    Home
-                  </NavLink>
-                  <NavLink to="/explore" className="nav-link">
-                    <i className="fa-solid fa-map"></i>
-                    Explore
-                  </NavLink>
-                  <HashLink to="#footer" className="nav-link">
-                    <i className="fa-solid fa-envelope"></i>
-                    Contact
-                  </HashLink>
-                  <NavLink to="/login" className="nav-link">
-                    <i className="fa-solid fa-arrow-right-to-bracket"></i>
-                    Login
-                  </NavLink>
-                </Nav>
-              </Navbar.Collapse>
+          <section id="navigation">
+            <Navbar collapseOnSelect expand="lg">
+              <Container>
+                <NavLink to="/">
+                  <Navbar.Brand className="brand">
+                    <img src={holidazeLogo} alt="Holidaze logo" />
+                    <div className="brand-texts">
+                      <div className="brand-name">Holidaze</div>
+                      <div className="brand-slogan">Hotels, B&B and Guesthouses</div>
+                    </div>
+                  </Navbar.Brand>
+                </NavLink>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                  <Form className="d-flex search-bar">
+                    <input type="search" placeholder="Search acommodation" className="me-2 search-bar-input" aria-label="Search" />
+                    <label htmlFor="search">
+                      <i className="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                  </Form>
+                  <Nav className="me-auto my-2 my-lg-0 nav-icons" navbarScroll>
+                    <NavLink to="/" className="nav-link">
+                      <i className="fa-solid fa-house"></i>
+                      Home
+                    </NavLink>
+                    <NavLink to="/explore" className="nav-link">
+                      <i className="fa-solid fa-map"></i>
+                      Explore
+                    </NavLink>
+                    <HashLink to="#footer" className="nav-link">
+                      <i className="fa-solid fa-envelope"></i>
+                      Contact
+                    </HashLink>
+                    <NavLink to="/login" className="nav-link">
+                      <i className="fa-solid fa-arrow-right-to-bracket"></i>
+                      Login
+                    </NavLink>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
             </Navbar>
-          </Container>
+          </section>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Explore />} />

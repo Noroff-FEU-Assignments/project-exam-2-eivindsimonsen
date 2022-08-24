@@ -54,19 +54,19 @@ function ContactForm() {
         <div className="contact-form-inputs--icon">
           <i className="fa-solid fa-envelope form-icons"></i>
           <input type="text" placeholder="Email" className="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-          {errors.email && <span>Name is required</span>}
+          {errors.email && <span>Email is required</span>}
         </div>
 
         <div className="contact-form-inputs--icon">
           <i className="fa-solid fa-file-lines form-icons"></i>
           <input type="text" placeholder="Subject" className="subject" {...register("subject", { required: true, min: 1 })} />
-          {errors.subject && <span>Name is required</span>}
+          {errors.subject && <span>A subject is required</span>}
         </div>
       </div>
 
       <div className="contact-form-textarea">
         <textarea placeholder="Message" className="message" {...register("message", { required: true, min: 1 })} />
-        {errors.message && <span>Name is required</span>}
+        {errors.message && <span>Provide your message</span>}
       </div>
 
       <div className="contact-form-button">

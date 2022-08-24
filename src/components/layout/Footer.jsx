@@ -3,7 +3,7 @@ import Heading from "./Heading";
 
 function Footer() {
   return (
-    <>
+    <section id="footer">
       <footer>
         <h4>
           <Heading title="Reach out to us!" />
@@ -11,9 +11,11 @@ function Footer() {
         <ContactForm />
       </footer>
       <div className="bottom-footer">
-        <h5>Copyright © Eivind Studios</h5>
+        <h5>
+          <Heading title="Copyright © Eivind Studios" />
+        </h5>
       </div>
-    </>
+    </section>
   );
 }
 

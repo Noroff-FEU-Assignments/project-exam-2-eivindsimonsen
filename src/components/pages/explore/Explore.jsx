@@ -1,10 +1,10 @@
-import Heading from "../../layout/Heading";
+import Banner from "../../common/Banner";
 
 function Explore() {
   return (
-    <h1>
-      <Heading title="Explore" />
-    </h1>
+    <section id="banner">
+      <Banner bannerclass="banner-image-explore" h1="Explore" h2="All available visits" />
+    </section>
   );
 }
 

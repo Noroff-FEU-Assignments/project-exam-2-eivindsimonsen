@@ -1,0 +1,71 @@
+// ------------ Popular cards ------------
+.popular-card {
+  width: 350px;
+  margin: 25px auto;
+  text-align: center;
+  border-radius: 20px;
+  background-color: $main-background;
+  transition: 0.3s;
+  @include shadow-elevation-medium;
+
+  &:hover {
+    border-radius: 20px;
+    width: 365px;
+    @include shadow-elevation-high;
+    transition: 0.3s;
+  }
+
+  & h3 {
+    margin-bottom: 10px;
+  }
+
+  & > * {
+    justify-content: center;
+  }
+
+  &-img img {
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 15px;
+
+    @media (min-width: 1044px) and (max-width: 2000px) {
+      height: auto;
+    }
+  }
+
+  &-feature,
+  &-price-booking {
+    display: flex;
+  }
+
+  &-details > * {
+    margin: 20px 0px;
+  }
+
+  &-feature > * {
+    background-color: $fourth-background;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0px 10px;
+    color: $main-background;
+  }
+
+  &-rating > * {
+    font-size: 1.7rem;
+    margin: 20px 10px;
+  }
+
+  &-price-booking {
+    justify-content: space-around;
+    align-items: baseline;
+
+    & p {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// ------------ Message cards ------------

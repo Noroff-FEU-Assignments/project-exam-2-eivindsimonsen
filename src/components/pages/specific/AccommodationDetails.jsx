@@ -1,10 +1,10 @@
-import Heading from "../../layout/Heading";
+import Banner from "../../common/Banner";
 
 function AccommodationDetails() {
   return (
-    <h1>
-      <Heading title="Accommodation Details" />
-    </h1>
+    <section id="banner">
+      <Banner bannerclass="banner-image-specific" h1="Book your holiday" h2="Book now, pay later" />
+    </section>
   );
 }
 

@@ -1,0 +1,105 @@
+// ------------ Banner images ------------
+.banner-image {
+  background-color: $fourth-background;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 50px;
+  // Horizontal value
+  background-position-x: 85%;
+  background-blend-mode: luminosity;
+  @include shadow-elevation-high;
+}
+
+.banner-image-index {
+  @extend .banner-image;
+  background-image: url(../../images/header-image-landscape.jpg);
+  height: 70vh;
+  // Vertical value
+  background-position-y: 30%;
+
+  // Centers the headings at mobile viewports
+  @media (max-width: 992px) {
+    & > * {
+      margin-left: -182.805px;
+    }
+  }
+}
+
+.banner-image-explore {
+  @extend .banner-image;
+  background-image: url(../../images/bergen-winter-landscape.jpg);
+  height: 50vh;
+  // Vertical value
+  background-position-y: 40%;
+
+  // Centers the headings at mobile viewports
+  @media (max-width: 992px) {
+    & > * {
+      margin-left: -118.865px;
+    }
+  }
+}
+
+.banner-image-specific {
+  @extend .banner-image;
+  background-image: url(../../images/bergen-havn-landscape.jpg);
+  height: 50vh;
+  // Vertical value
+  background-position-y: 100%;
+
+  @media (min-width: 992px) {
+    background-position-y: 70%;
+  }
+
+  // Centers the headings at mobile viewports
+  @media (max-width: 992px) {
+    & > * {
+      margin-left: -134.21px;
+    }
+  }
+}
+
+// ------------ Banners position ------------
+.banner-heading {
+  position: absolute;
+  // Centers the banner heading on mobile
+  left: 50%;
+  top: 80%;
+  // Half the height of element
+  margin-top: -71.315px;
+
+  & h1,
+  h2 {
+    padding: 20px;
+    margin: 0px;
+  }
+
+  & h1 {
+    background-color: $accent;
+    color: $main-background;
+  }
+
+  & h2 {
+    background-color: $main-background;
+    color: $text-color;
+  }
+
+  @media (min-width: 992px) {
+    left: 50%;
+    top: 50%;
+    // Half the width of element
+    margin-left: -325px;
+    // Half the height of element
+    margin-top: -84.15px;
+
+    & h1,
+    h2 {
+      width: 500px;
+    }
+
+    & h2 {
+      margin-left: 150px;
+    }
+  }
+}

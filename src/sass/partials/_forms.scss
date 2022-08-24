@@ -1,5 +1,4 @@
-// Universal form styles
-
+// ------------ Universal form styles ------------
 .input-error {
   border: 1.5px solid $accent;
   background-color: $error-color;
@@ -31,7 +30,7 @@ form {
   justify-content: center;
 }
 
-// Contact form styles
+// ------------ Contact form styles ------------
 .contact-form {
   & > * {
     margin: 0px 20px;
@@ -68,7 +67,7 @@ form {
   position: relative;
 }
 
-// Form icons
+// ------------ Form icons ------------
 .form-icons {
   font-size: 1.4rem;
   color: $accent;
