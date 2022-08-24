@@ -39,7 +39,7 @@ p {
 
 // ------------ Call to actions ------------
 .cta {
-  padding: 10px 35px;
+  padding: 8px 32px;
   background-color: $accent;
   border: 2px solid $accent;
   border-radius: 5px;
@@ -55,7 +55,7 @@ p {
     background-color: $main-background;
     border: 2px solid $accent;
     color: $accent;
-    padding: 10px 40px;
+    padding: 8px 36px;
     transition: 0.3s;
     @include shadow-elevation-medium;
   }
@@ -63,12 +63,14 @@ p {
 
 .cta-alt {
   @extend .cta;
+  padding: 12px 35px;
   background-color: $main-background;
   color: $accent;
   @include shadow-elevation-medium-cta;
 
   &:hover {
     background-color: $accent;
+    padding: 12px 39px;
     color: $main-background;
     @include shadow-elevation-high-cta;
   }
