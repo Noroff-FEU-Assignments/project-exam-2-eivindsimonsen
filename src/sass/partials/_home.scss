@@ -1,12 +1,14 @@
 // ------------ Index ------------
 #popular-visits,
-#feedback-messages {
+#feedback-messages,
+#carousel {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 60px;
 
   & > h2,
-  h3 {
+  h3,
+  q {
     flex-basis: 100%;
   }
 }
@@ -85,10 +87,54 @@
     margin-top: 40px;
 
     & span {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: $accent;
     }
   }
 }
 
 // ------------ Carousel section ------------
+.carousel-container {
+  position: relative;
+  & > div {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  & q {
+    font-size: 1.5rem;
+    color: $text-color;
+    opacity: 0.8;
+  }
+
+  @media (min-width: 1200px) {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #ff385c;
+      width: 94%;
+      height: 88%;
+      padding: 40px;
+      bottom: 0;
+      left: 81px;
+      z-index: -1;
+    }
+  }
+  @media (min-width: 1400px) {
+    &::after {
+      left: 100px;
+    }
+  }
+}
+
+.carousel {
+  @media (max-width: 1200px) {
+    border: 2.5px solid $accent;
+  }
+
+  &-control-prev > span,
+  &-control-next > span {
+    background-color: $text-color;
+  }
+}

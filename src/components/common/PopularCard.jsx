@@ -1,6 +1,6 @@
 import placeholder from "../../images/hotel.jpg";
 import { HeadingThree } from "../layout/Headings";
-import { NavLink } from "react-router-dom";
+import { ButtonLinkArrow } from "../common/Buttons";
 
 function PopularCard() {
   return (
@@ -19,20 +19,15 @@ function PopularCard() {
             <div>1 bedroom</div>
           </div>
           <div className="popular-card-rating">
-            <i class="fa-solid fa-star star-colored"></i>
-            <i class="fa-solid fa-star star-colored"></i>
-            <i class="fa-solid fa-star star-colored"></i>
-            <i class="fa-solid fa-star star-colored"></i>
-            <i class="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star star-colored"></i>
+            <i className="fa-solid fa-star star-colored"></i>
+            <i className="fa-solid fa-star star-colored"></i>
+            <i className="fa-solid fa-star star-colored"></i>
+            <i className="fa-solid fa-star"></i>
           </div>
-          <div className="popular-card-price-booking">
+          <div className="popular-card-footer">
             <p>$42/day</p>
-            <NavLink to="/explore" className="cta">
-              <div>Read more</div>
-              <div className="cta-arrow">
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </NavLink>
+            <ButtonLinkArrow location="/accommodationDetails" btnClass="cta" btnText="Read more" />
           </div>
         </div>
       </div>

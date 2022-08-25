@@ -1,10 +1,10 @@
-/* import Heading from "../../layout/Heading"; */
-import { HeadingTwo, HeadingThree } from "../../layout/Headings";
+import { HeadingTwo, HeadingThree, Quote } from "../../layout/Headings";
 import Banner from "../../common/Banner";
 import PopularCard from "../../common/PopularCard";
 import Feedback from "../../common/Feedback";
 import Container from "react-bootstrap/Container";
-import { NavLink } from "react-router-dom";
+import { ButtonLink } from "../../common/Buttons";
+import CarouselSlider from "../../common/Carousel";
 
 function Home() {
   return (
@@ -20,9 +20,7 @@ function Home() {
           <PopularCard />
         </section>
         <section className="explore-more">
-          <NavLink to="/explore" className="cta-alt">
-            Explore more
-          </NavLink>
+          <ButtonLink location="/explore" btnClass="cta-alt" btnText="Explore more" />
         </section>
       </Container>
       <section id="feedback-messages">
@@ -31,7 +29,12 @@ function Home() {
           <Feedback />
         </Container>
       </section>
-      <section id="carousel"></section>
+      <section id="carousel">
+        <Container className="carousel-container">
+          <Quote text="Bergen City must be one of the most beautiful places I've ever been!" />
+          <CarouselSlider />
+        </Container>
+      </section>
     </>
   );
 }

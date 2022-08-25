@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Button } from "../common/Buttons";
 
 function ContactForm() {
   const {
@@ -70,12 +71,7 @@ function ContactForm() {
       </div>
 
       <div className="contact-form-button">
-        <button type="submit" className="cta">
-          <div>Send</div>
-          <div className="cta-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-        </button>
+        <Button btnClass="cta" btnText="Send" />
       </div>
     </form>
   );

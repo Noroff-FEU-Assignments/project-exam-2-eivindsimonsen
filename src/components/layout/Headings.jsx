@@ -19,3 +19,11 @@ export function HeadingFour({ title }) {
 export function HeadingFive({ title }) {
   return <h5>{title}</h5>;
 }
+
+export function Quote({ text }) {
+  return (
+    <div>
+      <q>{text}</q>;
+    </div>
+  );
+}
