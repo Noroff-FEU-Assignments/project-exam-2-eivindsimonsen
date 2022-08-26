@@ -1,4 +1,4 @@
-import { HeadingFour } from "../layout/Headings";
+import { HeadingThree, HeadingFour } from "../layout/Headings";
 
 function Feedback() {
   return (
@@ -12,6 +12,11 @@ function Feedback() {
               </div>
               <div className="feedback-box-info">
                 <HeadingFour title="Kari Nordmann" />
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star"></i>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio facere eos praesentium animi officia dolor harum debitis alias voluptatibus. Illum hic accusamus molestias dolorum. Recusandae?</p>
                 <p className="feedback-user-location">
                   Visited Hotel Bristol through <span>Holidaze</span>
@@ -28,6 +33,11 @@ function Feedback() {
               </div>
               <div className="feedback-box-info">
                 <HeadingFour title="Ola Nordmann" />
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star star-colored"></i>
+                <i className="fa-solid fa-star"></i>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio facere eos praesentium animi officia dolor harum debitis alias voluptatibus. Illum hic accusamus molestias dolorum. Recusandae?</p>
                 <p className="feedback-user-location">
                   Visited Farm B&B through <span>Holidaze</span>

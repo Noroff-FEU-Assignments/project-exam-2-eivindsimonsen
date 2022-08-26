@@ -20,6 +20,21 @@ body {
   flex: 1 0 auto;
 }
 
+#accommodations,
+#accommodation-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  // Every second explore card component has a background avoiding container width
+  & > div:nth-child(even),
+  > section:nth-child(even) {
+    background-color: $secondary-background;
+    box-shadow: 0 0 0 100vmax $secondary-background;
+    clip-path: inset(0 -100vmax);
+  }
+}
+
 // ------------ Headings ------------
 h1,
 h2,
@@ -96,6 +111,15 @@ p {
   }
 }
 
+// Cancel out focus styles from bootstrap
+.btn:focus {
+  color: $main-background !important;
+  background-color: $accent !important;
+  border-color: $accent !important;
+  box-shadow: inherit !important;
+  outline: inherit !important;
+}
+
 // ------------ Inputs ------------
 // Removes the X icon on inputs
 input[type="search"]::-webkit-search-decoration,
@@ -113,6 +137,23 @@ input:focus {
 // ------------ Icons ------------
 .star-colored {
   color: $accent;
+}
+
+// ------------ Breadcrumbs ------------
+.breadcrumb {
+  align-items: center;
+  margin-left: 100px;
+  & a {
+    color: $text-color;
+  }
+
+  & > * {
+    margin: 0px 7px;
+  }
+
+  &-active {
+    font-size: 1.2rem;
+  }
 }
 
 // ------------ Footer ------------

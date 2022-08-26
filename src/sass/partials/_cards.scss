@@ -68,19 +68,6 @@
 }
 
 // ------------ Explore cards ------------
-#accommodations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  // Every second explore card component has a background avoiding container width
-  & > div:nth-child(even) {
-    background-color: $secondary-background;
-    box-shadow: 0 0 0 100vmax $secondary-background;
-    clip-path: inset(0 -100vmax);
-  }
-}
-
 .card-container {
   margin-bottom: 40px;
 }
