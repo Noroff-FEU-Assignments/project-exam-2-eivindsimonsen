@@ -1,4 +1,4 @@
-import { HeadingThree, HeadingFour } from "../layout/Headings";
+import { HeadingFour } from "../layout/Headings";
 
 function Feedback() {
   return (
