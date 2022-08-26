@@ -21,44 +21,52 @@ function ContactForm() {
   formInputs.forEach(() => {
     if (errors.firstName) {
       firstName.classList.add("input-error");
+      firstName.classList.add("input-error-still-icon");
     } else {
       firstName.classList.remove("input-error");
+      firstName.classList.add("input-error-still-icon");
     }
 
     if (errors.email) {
       email.classList.add("input-error");
+      email.classList.add("input-error-still-icon");
     } else {
       email.classList.remove("input-error");
+      email.classList.remove("input-error-still-icon");
     }
 
     if (errors.subject) {
       subject.classList.add("input-error");
+      subject.classList.add("input-error-still-icon");
     } else {
       subject.classList.remove("input-error");
+      subject.classList.remove("input-error-still-icon");
     }
 
     if (errors.message) {
       message.classList.add("input-error");
+      message.classList.add("input-error");
     } else {
       message.classList.remove("input-error");
+      message.classList.remove("input-error-still-icon");
     }
   });
 
   return (
     <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <div className="contact-form-inputs">
-        <div className="contact-form-inputs--icon">
+        <div className="form-icons-position">
           <i className="fa-solid fa-user form-icons"></i>
           <input type="text" placeholder="First name" className="firstName" {...register("firstName", { required: true, min: 1 })} />
           {errors.firstName && <span>Name is required</span>}
         </div>
-        <div className="contact-form-inputs--icon">
+        <div className="form-icons-position">
           <i className="fa-solid fa-envelope form-icons"></i>
           <input type="text" placeholder="Email" className="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
           {errors.email && <span>Email is required</span>}
         </div>
 
-        <div className="contact-form-inputs--icon">
+        <div className="form-icons-position">
           <i className="fa-solid fa-file-lines form-icons"></i>
           <input type="text" placeholder="Subject" className="subject" {...register("subject", { required: true, min: 1 })} />
           {errors.subject && <span>A subject is required</span>}

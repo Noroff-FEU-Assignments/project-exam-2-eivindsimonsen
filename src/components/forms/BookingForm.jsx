@@ -28,9 +28,9 @@ export default function BookingForm({ btnClass }) {
   const toDate = document.querySelector(".toDate");
   const persons = document.querySelector(".persons");
 
-  const formInputs = document.querySelectorAll(".booking-form input");
+  const formInputsBooking = document.querySelectorAll(".booking-form input");
 
-  formInputs.forEach(() => {
+  formInputsBooking.forEach(() => {
     if (errors.firstNameBooking) {
       firstNameBooking.classList.add("input-error");
     } else {

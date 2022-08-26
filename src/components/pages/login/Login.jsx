@@ -1,7 +1,11 @@
-import { HeadingOne } from "../../layout/Headings";
+import LoginForm from "../../forms/LoginForm";
 
 function Login() {
-  return <HeadingOne title="Login" />;
+  return (
+    <>
+      <LoginForm />
+    </>
+  );
 }
 
 export default Login;

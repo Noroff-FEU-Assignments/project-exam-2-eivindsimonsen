@@ -2,7 +2,10 @@
 .input-error {
   border: 1.5px solid $accent;
   background-color: $error-color;
-  margin-bottom: 0px;
+
+  &-still-icon {
+    margin-bottom: 0px;
+  }
 }
 
 input,
@@ -41,7 +44,6 @@ form {
   &-textarea {
     & span {
       color: $main-background;
-      margin-bottom: 15px;
     }
   }
 
@@ -62,7 +64,7 @@ form {
   }
 }
 
-.contact-form-inputs--icon {
+.form-icons-position {
   display: flex;
   flex-direction: column;
   position: relative;
