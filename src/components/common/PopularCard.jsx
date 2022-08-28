@@ -27,7 +27,7 @@ function PopularCard() {
           </div>
           <div className="popular-card-footer">
             <p>$42/day</p>
-            <ButtonLinkArrow location="/accommodationDetails" btnClass="cta" btnText="Read more" />
+            <ButtonLinkArrow location="/explore/accommodationDetails" btnClass="cta" btnText="Read more" />
           </div>
         </div>
       </div>
