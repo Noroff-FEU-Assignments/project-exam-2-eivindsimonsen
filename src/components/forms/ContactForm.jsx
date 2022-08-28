@@ -24,7 +24,7 @@ function ContactForm() {
       firstName.classList.add("input-error-still-icon");
     } else {
       firstName.classList.remove("input-error");
-      firstName.classList.add("input-error-still-icon");
+      firstName.classList.remove("input-error-still-icon");
     }
 
     if (errors.email) {
