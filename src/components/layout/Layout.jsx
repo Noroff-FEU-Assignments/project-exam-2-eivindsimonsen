@@ -18,7 +18,7 @@ import Footer from "./Footer";
 
 import holidazeLogo from "../../images/holidaze-logo.png";
 
-import ScrollToTop from "../hooks/ScrollToTop";
+import ScrollToTop from "../common/ScrollToTop";
 
 // ------------ Removes the nav when link is clicked ------------
 const homeLink = document.querySelector(".home-link");
