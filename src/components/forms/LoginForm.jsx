@@ -41,12 +41,12 @@ export default function LoginForm() {
         <div className="form-icons-position">
           <i className="fa-solid fa-user form-icons"></i>
           <input type="text" placeholder="Username" className="username" {...register("username", { required: true, min: 1, maxLength: 80 })} />
-          {errors.username && <span>Name is required</span>}
+          {errors.username && <span>Username does not exists</span>}
         </div>
         <div className="form-icons-position">
           <i className="fa-solid fa-key form-icons"></i>
           <input type="password" placeholder="Password" className="password" {...register("password", { required: true, min: 4 })} />
-          {errors.password && <span>Name is required</span>}
+          {errors.password && <span>Wrong password</span>}
         </div>
 
         <div className="contact-form-button">

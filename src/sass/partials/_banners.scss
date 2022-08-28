@@ -17,13 +17,6 @@
   height: 70vh;
   // Vertical value
   background-position-y: 30%;
-
-  // Centers the headings at mobile viewports
-  @media (max-width: 992px) {
-    & > * {
-      margin-left: -182.805px;
-    }
-  }
 }
 
 .banner-image-explore {
@@ -32,13 +25,6 @@
   height: 50vh;
   // Vertical value
   background-position-y: 40%;
-
-  // Centers the headings at mobile viewports
-  @media (max-width: 992px) {
-    & > * {
-      margin-left: -118.865px;
-    }
-  }
 }
 
 .banner-image-specific {
@@ -51,27 +37,18 @@
   @media (min-width: 992px) {
     background-position-y: 70%;
   }
-
-  // Centers the headings at mobile viewports
-  @media (max-width: 992px) {
-    & > * {
-      margin-left: -134.21px;
-    }
-  }
 }
 
 // ------------ Banners position ------------
 .banner-heading {
   position: absolute;
-  // Centers the banner heading on mobile
-  left: 50%;
-  top: 80%;
-  // Half the height of element
-  margin-top: -71.315px;
+  left: 0;
+  right: 0;
+  bottom: 10px;
 
   & h1,
   h2 {
-    padding: 20px;
+    padding: 17px;
     margin: 0px;
   }
 
@@ -96,6 +73,7 @@
     & h1,
     h2 {
       width: 500px;
+      padding: 20px;
     }
 
     & h2 {

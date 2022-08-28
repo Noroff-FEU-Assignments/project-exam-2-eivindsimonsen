@@ -108,3 +108,19 @@ a {
 .nav-icons i {
   font-size: 1.7rem;
 }
+
+// ------------ Hamburger menu icon ------------
+.navbar-toggler {
+  border: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.hamburger-menu {
+  font-size: 2rem;
+  color: red;
+  padding: 20px;
+  border: none;
+}

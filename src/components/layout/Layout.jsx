@@ -1,3 +1,4 @@
+// ------------ Imports ------------
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -17,6 +18,34 @@ import Footer from "./Footer";
 
 import holidazeLogo from "../../images/holidaze-logo.png";
 
+import ScrollToTop from "../hooks/ScrollToTop";
+
+// ------------ Removes the nav when link is clicked ------------
+const homeLink = document.querySelector(".home-link");
+const exploreLink = document.querySelector(".explore-link");
+const contactLink = document.querySelector(".contact-link");
+const loginLink = document.querySelector(".login-link");
+const navbarCollapse = document.querySelector(".navbar-collapse");
+
+if (navbarCollapse) {
+  homeLink.onclick = () => {
+    navbarCollapse.classList.remove("show");
+  };
+
+  exploreLink.onclick = () => {
+    navbarCollapse.classList.remove("show");
+  };
+
+  contactLink.onclick = () => {
+    navbarCollapse.classList.remove("show");
+  };
+
+  loginLink.onclick = () => {
+    navbarCollapse.classList.remove("show");
+  };
+}
+
+// Nav code
 function Layout() {
   return (
     <>
@@ -34,7 +63,9 @@ function Layout() {
                     </div>
                   </Navbar.Brand>
                 </NavLink>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav">
+                  <i className="fa-solid fa-bars hamburger-menu"></i>
+                </Navbar.Toggle>
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Form className="d-flex search-bar">
                     <input type="search" placeholder="Search acommodation" className="me-2 search-bar-input" aria-label="Search" />
@@ -43,19 +74,19 @@ function Layout() {
                     </label>
                   </Form>
                   <Nav className="me-auto my-2 my-lg-0 nav-icons" navbarScroll>
-                    <NavLink to="/" className="nav-link">
+                    <NavLink to="/" className="nav-link home-link">
                       <i className="fa-solid fa-house"></i>
                       Home
                     </NavLink>
-                    <NavLink to="/explore" className="nav-link">
+                    <NavLink to="/explore" className="nav-link explore-link">
                       <i className="fa-solid fa-map"></i>
                       Explore
                     </NavLink>
-                    <HashLink to="#footer" className="nav-link">
+                    <HashLink to="#footer" className="nav-link contact-link">
                       <i className="fa-solid fa-envelope"></i>
                       Contact
                     </HashLink>
-                    <NavLink to="/login" className="nav-link">
+                    <NavLink to="/login" className="nav-link login-link">
                       <i className="fa-solid fa-arrow-right-to-bracket"></i>
                       Login
                     </NavLink>
@@ -64,14 +95,16 @@ function Layout() {
               </Container>
             </Navbar>
           </section>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<Explore />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/enquiries" element={<Enquiries />} />
-            <Route path="/explore/accommodationdetails" element={<AccommodationDetails />} />
-          </Routes>
+          <ScrollToTop>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/explore" element={<Explore />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/admin/enquiries" element={<Enquiries />} />
+              <Route path="/explore/accommodationdetails" element={<AccommodationDetails />} />
+            </Routes>
+          </ScrollToTop>
         </Router>
       </div>
       <Footer />
