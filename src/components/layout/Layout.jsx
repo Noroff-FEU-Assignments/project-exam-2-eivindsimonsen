@@ -26,9 +26,8 @@ const exploreLink = document.querySelector(".explore-link");
 const contactLink = document.querySelector(".contact-link");
 const loginLink = document.querySelector(".login-link");
 const navbarCollapse = document.querySelector(".navbar-collapse");
-console.log(navbarCollapse);
 
-if (navbarCollapse.classList.contains("show")) {
+if (navbarCollapse) {
   homeLink.onclick = () => {
     navbarCollapse.classList.remove("show");
   };
