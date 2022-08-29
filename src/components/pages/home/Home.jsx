@@ -5,6 +5,7 @@ import Feedback from "../../common/Feedback";
 import Container from "react-bootstrap/Container";
 import { ButtonLink } from "../../common/Buttons";
 import CarouselSlider from "../../common/Carousel";
+import userProfile from "../../../images/quote-image.jpg";
 
 // If the buttons on popularCard or buttonLink is clicked, the home-link active class will follow, see additional code in explore.jsx and accommodationdetails.jsx
 function Home() {
@@ -32,7 +33,7 @@ function Home() {
       </section>
       <section id="carousel">
         <Container className="carousel-container">
-          <Quote text="Bergen City must be one of the most beautiful places I've ever been!" />
+          <Quote text="Bergen City must be one of the most beautiful places I've ever been!" profileImg={userProfile} />
           <CarouselSlider />
         </Container>
       </section>

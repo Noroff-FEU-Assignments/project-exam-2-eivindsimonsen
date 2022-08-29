@@ -20,10 +20,13 @@ export function HeadingFive({ title }) {
   return <h5>{title}</h5>;
 }
 
-export function Quote({ text }) {
+export function Quote({ text, profileImg }) {
   return (
-    <div>
-      <q>{text}</q>;
-    </div>
+    <>
+      <div className="quote-block">
+        <img src={profileImg} alt="A users profile headshot" />
+        <q>{text} - Jackie</q>
+      </div>
+    </>
   );
 }

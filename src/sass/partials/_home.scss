@@ -113,10 +113,10 @@
       display: block;
       position: absolute;
       background-color: #ff385c;
-      width: 94%;
-      height: 88%;
+      width: 93%;
+      height: 79%;
       padding: 40px;
-      bottom: 0;
+      bottom: 5px;
       left: 81px;
       z-index: -1;
     }
@@ -124,6 +124,7 @@
   @media (min-width: 1400px) {
     &::after {
       left: 100px;
+      bottom: 0;
     }
   }
 }
@@ -136,5 +137,22 @@
   &-control-prev > span,
   &-control-next > span {
     background-color: $text-color;
+  }
+}
+
+.quote-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & img {
+    margin-bottom: 15px;
+    border-radius: 50%;
+    width: 150px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: 1044px) {
+    display: block;
   }
 }
