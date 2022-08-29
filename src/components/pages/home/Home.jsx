@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import { ButtonLink } from "../../common/Buttons";
 import CarouselSlider from "../../common/Carousel";
 
+// If the buttons on popularCard or buttonLink is clicked, the home-link active class will follow, see additional code in explore.jsx and accommodationdetails.jsx
 function Home() {
   return (
     <>

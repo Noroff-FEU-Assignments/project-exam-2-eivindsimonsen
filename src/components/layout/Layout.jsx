@@ -20,6 +20,7 @@ import holidazeLogo from "../../images/holidaze-logo.png";
 
 import ScrollToTop from "../common/ScrollToTop";
 
+// I've disguised Nav.Link as router NavLink so that the navbar collapse will collapse on click at mobile width, which is why it has href attribute
 function Layout() {
   return (
     <>
@@ -48,22 +49,22 @@ function Layout() {
                     </label>
                   </Form>
                   <Nav className="me-auto my-2 my-lg-0 nav-icons" navbarScroll>
-                    <NavLink to="/" className="nav-link home-link">
+                    <Nav.Link as={NavLink} to="/" href="/" className="home-link">
                       <i className="fa-solid fa-house"></i>
                       Home
-                    </NavLink>
-                    <NavLink to="/explore" className="nav-link explore-link">
+                    </Nav.Link>
+                    <Nav.Link as={NavLink} to="/explore" href="/explore">
                       <i className="fa-solid fa-map"></i>
                       Explore
-                    </NavLink>
-                    <HashLink to="#footer" className="nav-link contact-link">
+                    </Nav.Link>
+                    <HashLink to="#footer" className="nav-link">
                       <i className="fa-solid fa-envelope"></i>
                       Contact
                     </HashLink>
-                    <NavLink to="/login" className="nav-link login-link">
+                    <Nav.Link as={NavLink} to="/login" href="/login">
                       <i className="fa-solid fa-arrow-right-to-bracket"></i>
                       Login
-                    </NavLink>
+                    </Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Container>

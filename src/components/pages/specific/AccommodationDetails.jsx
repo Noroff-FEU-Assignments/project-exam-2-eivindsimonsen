@@ -6,6 +6,12 @@ import Feedback from "../../common/Feedback";
 import { HeadingThree } from "../../layout/Headings";
 
 function AccommodationDetails() {
+  // Removes the active link on nav home link
+  const homeLink = document.querySelector(".home-link");
+  setTimeout(function () {
+    homeLink.classList.remove("active");
+  }, 100);
+
   return (
     <>
       <section id="banner">

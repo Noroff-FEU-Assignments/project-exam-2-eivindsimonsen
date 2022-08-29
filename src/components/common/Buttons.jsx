@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Button({ btnClass, btnText }) {
   return (
@@ -13,19 +13,19 @@ export function Button({ btnClass, btnText }) {
 
 export function ButtonLink({ location, btnClass, btnText }) {
   return (
-    <NavLink to={location} className={btnClass}>
+    <Link to={location} className={btnClass}>
       <div>{btnText}</div>
-    </NavLink>
+    </Link>
   );
 }
 
 export function ButtonLinkArrow({ location, btnClass, btnText }) {
   return (
-    <NavLink to={location} className={btnClass}>
+    <Link to={location} className={btnClass}>
       <div>{btnText}</div>
       <div className="cta-arrow">
         <i className="fa-solid fa-arrow-right"></i>
       </div>
-    </NavLink>
+    </Link>
   );
 }
