@@ -20,32 +20,6 @@ import holidazeLogo from "../../images/holidaze-logo.png";
 
 import ScrollToTop from "../common/ScrollToTop";
 
-// ------------ Removes the nav when link is clicked ------------
-const homeLink = document.querySelector(".home-link");
-const exploreLink = document.querySelector(".explore-link");
-const contactLink = document.querySelector(".contact-link");
-const loginLink = document.querySelector(".login-link");
-const navbarCollapse = document.querySelector(".navbar-collapse");
-
-if (navbarCollapse) {
-  homeLink.onclick = () => {
-    navbarCollapse.classList.remove("show");
-  };
-
-  exploreLink.onclick = () => {
-    navbarCollapse.classList.remove("show");
-  };
-
-  contactLink.onclick = () => {
-    navbarCollapse.classList.remove("show");
-  };
-
-  loginLink.onclick = () => {
-    navbarCollapse.classList.remove("show");
-  };
-}
-
-// Nav code
 function Layout() {
   return (
     <>
