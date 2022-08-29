@@ -26,8 +26,9 @@ const exploreLink = document.querySelector(".explore-link");
 const contactLink = document.querySelector(".contact-link");
 const loginLink = document.querySelector(".login-link");
 const navbarCollapse = document.querySelector(".navbar-collapse");
+console.log(navbarCollapse);
 
-if (navbarCollapse) {
+if (navbarCollapse.classList.contains("show")) {
   homeLink.onclick = () => {
     navbarCollapse.classList.remove("show");
   };
@@ -68,7 +69,7 @@ function Layout() {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Form className="d-flex search-bar">
-                    <input type="search" placeholder="Search acommodation" className="me-2 search-bar-input" aria-label="Search" />
+                    <input type="search" placeholder="Search acommodation" className="search-bar-input" aria-label="Search" />
                     <label htmlFor="search">
                       <i className="fa-solid fa-magnifying-glass"></i>
                     </label>
