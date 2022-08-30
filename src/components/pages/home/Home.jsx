@@ -9,11 +9,22 @@ import userProfile from "../../../images/quote-image.jpg";
 
 // If the buttons on popularCard or buttonLink is clicked, the home-link active class will follow, see additional code in explore.jsx and accommodationdetails.jsx
 function Home() {
+  //This code makes sure the active class on given links are removed, because they stay active if I return to index with the brand link.
+  const exploreLink = document.querySelector(".explore-link");
+  const loginLink = document.querySelector(".login-link");
+
+  setTimeout(function () {
+    if (window.location.pathname === "/") {
+      exploreLink.classList.remove("active");
+      loginLink.classList.remove("active");
+    }
+  }, 100);
+
+  //------------------------------------------------------------------------------
+
   return (
     <>
-      <section id="banner">
-        <Banner bannerclass="banner-image-index" h1="Visit Bergen City" h2="Hotels / B&B / Guesthouses" />
-      </section>
+      <Banner bannerclass="banner-image-index" h1="Visit Bergen City" h2="Hotels / B & B / Guesthouses" />
       <Container>
         <section id="popular-visits">
           <HeadingTwo title="Popular visits" />

@@ -24,6 +24,10 @@ textarea {
   }
 }
 
+label {
+  color: $text-color;
+}
+
 textarea {
   height: 191px;
 }
@@ -91,5 +95,13 @@ form {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+}
+
+// ------------ Establish form styles ------------
+.establish-form {
+  & > * {
+    display: flex;
+    flex-direction: column;
   }
 }

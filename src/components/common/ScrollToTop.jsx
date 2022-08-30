@@ -1,7 +1,7 @@
-// ------------ When a link is clicked, window scrolls to top of page ------------
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
+// This code scrolls the page to the top on route change
 const ScrollToTop = (props) => {
   const location = useLocation();
   useEffect(() => {

@@ -14,28 +14,12 @@ function AccommodationDetails() {
 
   return (
     <>
-      <section id="banner">
-        <Banner bannerclass="banner-image-specific" h1="Book your holiday" h2="Book now, pay later" />
-      </section>
-      <section id="breadcrumbs">
-        <Breadcrumbs prev="Explore" current="Details" />
-      </section>
+      <Banner bannerclass="banner-image-specific" h1="Book your holiday" h2="Book now, pay later" />
+      <Breadcrumbs prev="Explore" current="Details" />
       <section id="accommodation-details">
-        <section id="accommodation-base">
-          <Container className="acco-wrapper">
-            <AccoBase />
-          </Container>
-        </section>
-        <section id="accommodation-descri">
-          <Container>
-            <AccoDescription />
-          </Container>
-        </section>
-        <section id="accommodation-images">
-          <Container className="acco-wrapper">
-            <AccoImages />
-          </Container>
-        </section>
+        <AccoBase />
+        <AccoDescription />
+        <AccoImages />
         <section id="accommodation-feedback">
           <Container className="acco-wrapper">
             <HeadingThree title="Reviews from this acommondation" />

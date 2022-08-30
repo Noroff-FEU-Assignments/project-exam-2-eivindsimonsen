@@ -1,0 +1,127 @@
+// ------------ User messages card ------------
+#user-messages {
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.user-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 40px auto;
+  align-items: center;
+  @include shadow-elevation-medium;
+  padding: 30px;
+  background-color: $main-background;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &-image {
+    display: flex;
+    font-size: 4rem;
+    background-color: $main-background;
+    color: $fourth-background;
+    border-radius: 50%;
+    padding: 40px;
+    margin-right: 20px;
+    border: 1px solid $fourth-background;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & div:first-of-type {
+      display: flex;
+    }
+  }
+
+  &-credentials {
+    display: flex;
+    flex-direction: column;
+
+    & div:first-of-type > * {
+      margin-right: 10px;
+    }
+
+    & span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// ------------ Enquiries ------------
+.delivered-mobile {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: revert;
+  }
+}
+
+.delivered-desktop {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.enquiry {
+  margin-bottom: 20px;
+
+  &-button {
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  &-date {
+    font-size: 1.5rem;
+  }
+
+  &-box {
+    width: 100%;
+    border: 1px solid $fourth-background;
+    margin: 0px;
+    transition: 0.3s;
+
+    &:hover {
+      @include shadow-elevation-high;
+      transition: 0.3s;
+    }
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1154px) {
+      flex-direction: row;
+    }
+
+    & > * {
+      margin: 0px 30px;
+    }
+
+    &-person {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-accommodation {
+      display: flex;
+      flex-direction: column;
+
+      &-dates > div:first-of-type {
+        margin-right: 10px;
+      }
+    }
+
+    &-person span,
+    &-accommodation span {
+      font-weight: 600;
+    }
+  }
+}

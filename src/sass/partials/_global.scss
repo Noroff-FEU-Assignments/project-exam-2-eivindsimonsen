@@ -21,7 +21,8 @@ body {
 }
 
 #accommodations,
-#accommodation-details {
+#accommodation-details,
+#admin-panel {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -132,6 +133,19 @@ input[type="search"]::-webkit-search-results-decoration {
 textarea:focus,
 input:focus {
   outline: none;
+}
+
+// ------------ Tables ------------
+table {
+  width: 100%;
+  margin: 0px auto;
+  border-spacing: 30px;
+  border-collapse: inherit;
+
+  & th {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
 }
 
 // ------------ Icons ------------

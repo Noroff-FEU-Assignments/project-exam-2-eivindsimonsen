@@ -11,7 +11,7 @@ export default function BookingForm({ btnClass }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // Handle form
+  // Handle form in modal
   const {
     register,
     handleSubmit,
@@ -20,6 +20,7 @@ export default function BookingForm({ btnClass }) {
   const onSubmit = (data) => console.log(data);
   console.log(errors);
 
+  // Validation
   const firstNameBooking = document.querySelector(".firstNameBooking");
   const emailBooking = document.querySelector(".emailBooking");
   const number = document.querySelector(".number");

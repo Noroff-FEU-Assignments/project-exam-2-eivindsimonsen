@@ -1,4 +1,3 @@
-// ------------ Imports ------------
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -20,7 +19,7 @@ import holidazeLogo from "../../images/holidaze-logo.png";
 
 import ScrollToTop from "../common/ScrollToTop";
 
-// I've disguised Nav.Link as router NavLink so that the navbar collapse will collapse on click at mobile width, which is why it has href attribute
+// I've disguised Nav.Link as router NavLink so that the navbar collapse will collapse on click at mobile width, which is why it has href attribute. If i use NavLink the collapse won't happen on click, which is annoying on mobile
 function Layout() {
   return (
     <>
@@ -53,7 +52,7 @@ function Layout() {
                       <i className="fa-solid fa-house"></i>
                       Home
                     </Nav.Link>
-                    <Nav.Link as={NavLink} to="/explore" href="/explore">
+                    <Nav.Link as={NavLink} to="/explore" href="/explore" className="explore-link">
                       <i className="fa-solid fa-map"></i>
                       Explore
                     </Nav.Link>
@@ -61,7 +60,7 @@ function Layout() {
                       <i className="fa-solid fa-envelope"></i>
                       Contact
                     </HashLink>
-                    <Nav.Link as={NavLink} to="/login" href="/login">
+                    <Nav.Link as={NavLink} to="/login" href="/login" className="login-link">
                       <i className="fa-solid fa-arrow-right-to-bracket"></i>
                       Login
                     </Nav.Link>

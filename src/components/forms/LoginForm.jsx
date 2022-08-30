@@ -11,6 +11,7 @@ export default function LoginForm() {
   const onSubmit = (data) => console.log(data);
   console.log(errors);
 
+  // Validation
   const username = document.querySelector(".username");
   const password = document.querySelector(".password");
 
