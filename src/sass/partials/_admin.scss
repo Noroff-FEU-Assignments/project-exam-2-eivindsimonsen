@@ -86,10 +86,15 @@
     border: 1px solid $fourth-background;
     margin: 0px;
     transition: 0.3s;
+    padding: 30px 0px;
 
     &:hover {
       @include shadow-elevation-high;
       transition: 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      padding: 30px;
     }
   }
 
@@ -113,6 +118,7 @@
     &-accommodation {
       display: flex;
       flex-direction: column;
+      width: 200px;
 
       &-dates > div:first-of-type {
         margin-right: 10px;

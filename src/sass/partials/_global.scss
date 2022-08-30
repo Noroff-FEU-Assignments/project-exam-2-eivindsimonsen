@@ -140,11 +140,15 @@ table {
   width: 100%;
   margin: 0px auto;
   border-spacing: 30px;
-  border-collapse: inherit;
+  border-collapse: collapse;
 
   & th {
     font-size: 1.6rem;
     font-weight: 500;
+  }
+
+  @media (min-width: 992px) {
+    border-collapse: inherit;
   }
 }
 
