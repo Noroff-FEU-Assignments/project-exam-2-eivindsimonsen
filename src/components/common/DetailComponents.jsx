@@ -1,4 +1,3 @@
-import placeholder from "../../images/bandb.jpg";
 import BookingForm from "../forms/BookingForm";
 import { HeadingTwo, HeadingThree } from "../layout/Headings";
 import { Container } from "react-bootstrap";
