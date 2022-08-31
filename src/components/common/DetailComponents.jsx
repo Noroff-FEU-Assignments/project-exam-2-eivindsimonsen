@@ -1,20 +1,22 @@
 import BookingForm from "../forms/BookingForm";
-import { HeadingTwo, HeadingThree } from "../layout/Headings";
+import { HeadingTwo, HeadingThree, HeadingFour } from "../layout/Headings";
 import { Container } from "react-bootstrap";
+import Loader from "./Loader";
+import Alert from "react-bootstrap/Alert";
 
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { API_PRODUCT_URL, API_CONSUMER_KEY, API_SECRET_KEY } from "../../constants/api";
 
-// ------------ Accommodation base ------------
+// ------------ Accommodation base ------------------------------------------------------------------------------------------------------------
 export function AccoBase() {
-  // Get request
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   let navigate = useNavigate();
 
+  // Retrieve ID from url
   const { id } = useParams();
 
   // If id does not exist, return to index page
@@ -25,37 +27,45 @@ export function AccoBase() {
   const newUrl = API_PRODUCT_URL + id + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
 
   useEffect(
+    // function that will run every time the component renders
     function () {
+      // Get request
       async function fetchData() {
         try {
           const response = await fetch(newUrl);
 
           if (response.ok) {
             const json = await response.json();
+            // Assign the json to product state
             setProduct(json);
           } else {
+            //  If response failes, set error value to error state
             setError("An error occured");
           }
         } catch (error) {
           setError(error.toString());
         } finally {
+          // Will run regardless of fail or not
           setLoading(false);
         }
       }
+      // Call the api
       fetchData();
     },
     [newUrl]
   );
 
+  // Display loading indicator until products load
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
-  // Display message in dom if error occurs
+  // Display message in dom if error state has a value
   if (error) {
-    return <div>ERROR: An error occured</div>;
+    return <Alert variant="danger">ERROR: An error occured when loading the product, try again later</Alert>;
   }
 
+  // No need for mapping, because we only retrieve one item from the API
   return (
     <section id="accommodation-base">
       <Container className="acco-wrapper">
@@ -94,15 +104,15 @@ export function AccoBase() {
   );
 }
 
-// ------------ Accommodation description ------------
+// ------------ Accommodation description ------------------------------------------------------------------------------------------------------------
 export function AccoDescription() {
-  // Get request
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   let navigate = useNavigate();
 
+  // Retrieve ID from url
   const { id } = useParams();
 
   // If id does not exist, return to index page
@@ -113,38 +123,45 @@ export function AccoDescription() {
   const newUrl = API_PRODUCT_URL + id + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
 
   useEffect(
+    // function that will run every time the component renders
     function () {
+      // Get request
       async function fetchData() {
         try {
           const response = await fetch(newUrl);
 
           if (response.ok) {
             const json = await response.json();
-
+            // Assign the json to product state
             setProduct(json);
           } else {
+            //  If response failes, set error value to error state
             setError("An error occured");
           }
         } catch (error) {
           setError(error.toString());
         } finally {
+          // Will run regardless of fail or not
           setLoading(false);
         }
       }
+      // Call the api
       fetchData();
     },
     [newUrl]
   );
 
+  // Display loading indicator until products load
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Display message in dom if error occurs
+  // Display message in dom if error state has a value
   if (error) {
-    return <div>ERROR: An error occured</div>;
+    return <Alert variant="danger">ERROR: An error occured when loading the description, try again later</Alert>;
   }
 
+  // No need for mapping, because we only retrieve one item from the API
   return (
     <section id="accommodation-descri">
       <Container>
@@ -157,15 +174,15 @@ export function AccoDescription() {
   );
 }
 
-// ------------ Accommodation images ------------
+// ------------ Accommodation images ------------------------------------------------------------------------------------------------------------------------
 export function AccoImages() {
-  // Get request
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   let navigate = useNavigate();
 
+  // Retrieve ID from url
   const { id } = useParams();
 
   // If id does not exist, return to index page
@@ -176,42 +193,50 @@ export function AccoImages() {
   const newUrl = API_PRODUCT_URL + id + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
 
   useEffect(
+    // function that will run every time the component renders
     function () {
+      // Get request
       async function fetchData() {
         try {
           const response = await fetch(newUrl);
 
           if (response.ok) {
             const json = await response.json();
-
+            // Assign the json to product state
             setProduct(json);
           } else {
+            //  If response failes, set error value to error state
             setError("An error occured");
           }
         } catch (error) {
           setError(error.toString());
         } finally {
+          // Will run regardless of fail or not
           setLoading(false);
         }
       }
+      // Call the api
       fetchData();
     },
     [newUrl]
   );
 
+  // Display loading indicator until products load
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Display message in dom if error occurs
+  // Display message in dom if error state has a value
   if (error) {
-    return <div>ERROR: An error occured</div>;
+    return <Alert variant="danger">ERROR: An error occured when loading the gallery, try again later</Alert>;
   }
 
+  // No need for mapping, because we only retrieve one item from the API
   return (
     <section id="accommodation-images">
       <Container className="acco-wrapper">
         <div className="acco-images">
+          <HeadingFour title="Gallery" />
           <div className="acco-images-active">
             <img src={product.images[0].src} alt={product.images[0].alt} />
           </div>

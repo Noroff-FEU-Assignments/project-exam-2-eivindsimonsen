@@ -1,11 +1,12 @@
 import { HeadingThree } from "../layout/Headings";
 import { ButtonLinkArrow } from "../common/Buttons";
+import Loader from "./Loader";
+import Alert from "react-bootstrap/Alert";
 
 import { useState, useEffect } from "react";
 import { API_PRODUCT_URL, API_CONSUMER_KEY, API_SECRET_KEY } from "../../constants/api";
 
 function PopularCard() {
-  // Get request
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -13,7 +14,9 @@ function PopularCard() {
   const url = API_PRODUCT_URL + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
 
   useEffect(
+    // function that will run every time the component renders
     function () {
+      // The get request
       async function fetchData() {
         try {
           const response = await fetch(url);
@@ -23,28 +26,35 @@ function PopularCard() {
             // Assign the json to product state
             setProduct(json);
           } else {
+            //  If response failes, set error value to error state
             setError("An error occured");
           }
         } catch (error) {
           setError(error.toString());
         } finally {
+          // Will run regardless of fail or not
           setLoading(false);
         }
       }
+      // Call the api
       fetchData();
     },
     [url]
   );
 
+  // Display loading indicator until products load
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
-  // Display message in dom if error occurs
+  // Display message in dom if error state has a value
   if (error) {
-    return <div>ERROR: An error occured</div>;
+    return <Alert variant="danger">ERROR: Failed to load products, try again later</Alert>;
   }
 
+  // Map(loop) over the products in the API and return this JSX for each one.
+  // If statement makes sure than only featured products display
+  // Line 61 is provided a key prop, each parent needs a key prop
   return (
     <>
       {product.map(function (item) {

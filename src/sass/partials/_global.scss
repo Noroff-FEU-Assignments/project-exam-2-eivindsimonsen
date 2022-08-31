@@ -157,6 +157,18 @@ table {
   color: $accent;
 }
 
+// ------------ Spinner ------------
+.spinner-border {
+  color: $accent;
+  padding: 30px;
+  margin: 0px auto;
+}
+
+// Alerts
+.alert-danger {
+  margin: 0px auto;
+}
+
 // ------------ Breadcrumbs ------------
 .breadcrumb {
   align-items: center;
