@@ -123,3 +123,8 @@ End of week 7: Report with link to website or a Github link and feedback from co
 Report template included in the repo.
 
 [Video on deploying Strapi to Heroku](https://vimeo.com/689226140/9b378e06b2)
+
+# Login details
+
+username: eivindsimonsenjsframeworks.one
+password: Admin1234
