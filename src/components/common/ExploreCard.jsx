@@ -3,7 +3,7 @@ import { ButtonLinkArrow } from "./Buttons";
 import Container from "react-bootstrap/Container";
 
 import { useState, useEffect } from "react";
-import { API_PRODUCT_URL } from "../../constants/api";
+import { API_PRODUCT_URL, API_CONSUMER_KEY, API_SECRET_KEY } from "../../constants/api";
 
 function ExploreCard() {
   // Get request
@@ -11,26 +11,30 @@ function ExploreCard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(function () {
-    async function fetchData() {
-      try {
-        const response = await fetch(API_PRODUCT_URL);
+  const url = API_PRODUCT_URL + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
 
-        if (response.ok) {
-          const json = await response.json();
-          console.log(json);
-          setProduct(json);
-        } else {
-          setError("An error occured");
+  useEffect(
+    function () {
+      async function fetchData() {
+        try {
+          const response = await fetch(url);
+
+          if (response.ok) {
+            const json = await response.json();
+            setProduct(json);
+          } else {
+            setError("An error occured");
+          }
+        } catch (error) {
+          setError(error.toString());
+        } finally {
+          setLoading(false);
         }
-      } catch (error) {
-        setError(error.toString());
-      } finally {
-        setLoading(false);
       }
-    }
-    fetchData();
-  }, []);
+      fetchData();
+    },
+    [url]
+  );
 
   if (loading) {
     return <div>Loading...</div>;
@@ -43,7 +47,6 @@ function ExploreCard() {
   return (
     <>
       {product.map(function (item) {
-        /* console.log(item.description); */
         return (
           <Container key={item.id} className="card-container">
             <div className="explore-card">
@@ -66,7 +69,7 @@ function ExploreCard() {
                 </div>
                 <div className="explore-card-footer">
                   <p>{item.price}kr / day</p>
-                  <ButtonLinkArrow location="/explore/accommodationDetails" btnClass="cta" btnText="Read more" />
+                  <ButtonLinkArrow location={`/explore/accommodationDetails/${item.id}`} btnClass="cta" btnText="Read more" />
                 </div>
               </div>
             </div>

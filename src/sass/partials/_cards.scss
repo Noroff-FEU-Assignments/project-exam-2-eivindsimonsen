@@ -123,10 +123,8 @@
     justify-content: space-between;
     align-items: baseline;
 
-    @media (min-width: 1044px) {
-      & p {
-        font-size: 1.5rem;
-      }
+    & p {
+      font-size: 1.5rem;
     }
   }
 

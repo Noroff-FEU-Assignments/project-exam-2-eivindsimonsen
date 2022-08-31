@@ -76,7 +76,7 @@ function Layout() {
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/admin/enquiries" element={<Enquiries />} />
-              <Route path="/explore/accommodationdetails" element={<AccommodationDetails />} />
+              <Route path="/explore/accommodationdetails/:id" element={<AccommodationDetails />} />
             </Routes>
           </ScrollToTop>
         </Router>

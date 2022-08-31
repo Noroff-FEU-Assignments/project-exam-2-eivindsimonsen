@@ -23,6 +23,7 @@
 
   & > div > i {
     font-size: 1.7rem;
+    margin: 0px 5px;
   }
 
   @media (min-width: 768px) {
@@ -70,15 +71,36 @@
     }
 
     & p {
-      font-size: 3rem;
+      font-size: 2rem;
       color: $text-color;
       text-align: center;
+      @media (min-width: 992px) {
+        font-size: 3rem;
+      }
 
       &:nth-child(2) {
-        font-size: 5rem;
+        font-size: 3rem;
         margin: 20px 0px;
+
+        @media (min-width: 768px) {
+          font-size: 5rem;
+        }
       }
     }
+  }
+}
+
+.details-feature {
+  justify-content: center;
+  width: 100px;
+  text-align: center;
+  white-space: nowrap;
+  & > * {
+    margin-top: 50px;
+  }
+
+  @media (min-width: 992px) {
+    width: 300px;
   }
 }
 

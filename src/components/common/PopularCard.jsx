@@ -2,7 +2,7 @@ import { HeadingThree } from "../layout/Headings";
 import { ButtonLinkArrow } from "../common/Buttons";
 
 import { useState, useEffect } from "react";
-import { API_PRODUCT_URL } from "../../constants/api";
+import { API_PRODUCT_URL, API_CONSUMER_KEY, API_SECRET_KEY } from "../../constants/api";
 
 function PopularCard() {
   // Get request
@@ -10,31 +10,37 @@ function PopularCard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(function () {
-    async function fetchData() {
-      try {
-        const response = await fetch(API_PRODUCT_URL);
+  const url = API_PRODUCT_URL + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
 
-        if (response.ok) {
-          const json = await response.json();
-          /* console.log(json); */
-          setProduct(json);
-        } else {
-          setError("An error occured");
+  useEffect(
+    function () {
+      async function fetchData() {
+        try {
+          const response = await fetch(url);
+
+          if (response.ok) {
+            const json = await response.json();
+            // Assign the json to product state
+            setProduct(json);
+          } else {
+            setError("An error occured");
+          }
+        } catch (error) {
+          setError(error.toString());
+        } finally {
+          setLoading(false);
         }
-      } catch (error) {
-        setError(error.toString());
-      } finally {
-        setLoading(false);
       }
-    }
-    fetchData();
-  }, []);
+      fetchData();
+    },
+    [url]
+  );
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  // Display message in dom if error occurs
   if (error) {
     return <div>ERROR: An error occured</div>;
   }
@@ -42,10 +48,9 @@ function PopularCard() {
   return (
     <>
       {product.map(function (item) {
-        /* console.log(item.attributes[1]); */
         if (item.featured === true) {
           return (
-            <div key={item.id} className="popular-card">
+            <div key={item.id} id={item.id} className="popular-card">
               <div className="popular-card-img">
                 <img src={item.images[0].src} alt={item.images[0].alt} />
               </div>
@@ -67,7 +72,7 @@ function PopularCard() {
                 </div>
                 <div className="popular-card-footer">
                   <p>{item.price}kr / day</p>
-                  <ButtonLinkArrow location="/explore/accommodationDetails" btnClass="cta" btnText="Read more" />
+                  <ButtonLinkArrow location={`/explore/accommodationDetails/${item.id}`} btnClass="cta" btnText="Read more" />
                 </div>
               </div>
             </div>
