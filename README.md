@@ -82,12 +82,12 @@ You will need to create an API to store the data for the establishments, enquiri
 
 ### Visitor Side
 
-- Homepage ###### Done
+- Homepage
 - Search bar typeahead (auto dropdown with hotel names that match what has been typed)
-- A results page with all hotels ###### Done
-- The hotel specific page which displays all details about the hotel ###### Done
-- An enquiry page either modal or separate page ###### Done
-- A contact page (different to enquiry page) which goes to the admin for Holidaze ###### Done
+- A results page with all hotels
+- The hotel specific page which displays all details about the hotel
+- An enquiry page either modal or separate page
+- A contact page (different to enquiry page) which goes to the admin for Holidaze
 
 ### Admin side
 
