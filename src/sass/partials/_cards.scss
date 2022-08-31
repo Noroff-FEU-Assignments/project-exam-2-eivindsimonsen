@@ -90,7 +90,7 @@
     }
 
     @media (min-width: 1044px) {
-      margin-left: 40px;
+      margin: auto 20px;
     }
   }
 
@@ -100,9 +100,13 @@
     margin-top: 30px;
     align-items: baseline;
 
-    &-ratings > * {
-      font-size: 1.3rem;
-      margin: 0px 5px;
+    &-ratings {
+      white-space: pre;
+
+      & > * {
+        font-size: 1.3rem;
+        margin: 0px 5px;
+      }
     }
 
     @media (min-width: 1044px) {
