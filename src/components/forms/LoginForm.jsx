@@ -1,16 +1,20 @@
 import { HeadingOne } from "../layout/Headings";
 import { useForm } from "react-hook-form";
 import { Button } from "../common/Buttons";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { API_URL, API_TOKEN_PATH } from "../../constants/api";
 import { Alert } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../../context/AuthContext";
 
 const url = API_URL + API_TOKEN_PATH;
 
 export default function LoginForm() {
   const [submitting, setSubmitting] = useState(false);
   const [loginError, setLoginError] = useState(null);
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -19,6 +23,8 @@ export default function LoginForm() {
   } = useForm();
   /* const onSubmit = (data) => console.log(data); */
   console.log(errors);
+
+  const [auth, setAuth] = useContext(AuthContext);
 
   // Gets the data from the login form
   async function onSubmit(data) {
@@ -32,6 +38,8 @@ export default function LoginForm() {
       // post the input into the url, and if credentials are correct, jwt key is returned
       const response = await axios.post(url, data);
       console.log("Response", response.data);
+      setAuth(response.data);
+      navigate("/admin");
     } catch (error) {
       // If the credentials are falsy, set this as error state
       setLoginError("Wrong username or password");

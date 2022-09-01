@@ -94,6 +94,16 @@ p {
   & > .cta-arrow {
     margin-left: 10px;
   }
+
+  &--nav {
+    white-space: pre;
+    margin: 0px auto;
+    width: 112px;
+
+    @media (min-width: 1200px) {
+      margin-left: 40px;
+    }
+  }
 }
 
 .cta-alt {

@@ -20,55 +20,57 @@ export default function App() {
   const location = document.querySelector(".location");
 
   const formInputs = document.querySelectorAll("input, textarea");
-  formInputs.forEach(() => {
-    if (errors.accommodationName) {
-      accommodationName.classList.add("input-error");
-      accommodationName.classList.add("input-error-still-icon");
-    } else {
-      accommodationName.classList.remove("input-error");
-      accommodationName.classList.remove("input-error-still-icon");
-    }
+  setTimeout(function () {
+    formInputs.forEach(() => {
+      if (errors.accommodationName) {
+        accommodationName.classList.add("input-error");
+        accommodationName.classList.add("input-error-still-icon");
+      } else {
+        accommodationName.classList.remove("input-error");
+        accommodationName.classList.remove("input-error-still-icon");
+      }
 
-    if (errors.keyFeatures) {
-      keyFeatures.classList.add("input-error");
-      keyFeatures.classList.add("input-error-still-icon");
-    } else {
-      keyFeatures.classList.remove("input-error");
-      keyFeatures.classList.remove("input-error-still-icon");
-    }
+      if (errors.keyFeatures) {
+        keyFeatures.classList.add("input-error");
+        keyFeatures.classList.add("input-error-still-icon");
+      } else {
+        keyFeatures.classList.remove("input-error");
+        keyFeatures.classList.remove("input-error-still-icon");
+      }
 
-    if (errors.description) {
-      description.classList.add("input-error");
-      description.classList.add("input-error-still-icon");
-    } else {
-      description.classList.remove("input-error");
-      description.classList.remove("input-error-still-icon");
-    }
+      if (errors.description) {
+        description.classList.add("input-error");
+        description.classList.add("input-error-still-icon");
+      } else {
+        description.classList.remove("input-error");
+        description.classList.remove("input-error-still-icon");
+      }
 
-    if (errors.price) {
-      price.classList.add("input-error");
-      price.classList.add("input-error-still-icon");
-    } else {
-      price.classList.remove("input-error");
-      price.classList.remove("input-error-still-icon");
-    }
+      if (errors.price) {
+        price.classList.add("input-error");
+        price.classList.add("input-error-still-icon");
+      } else {
+        price.classList.remove("input-error");
+        price.classList.remove("input-error-still-icon");
+      }
 
-    if (errors.image) {
-      image.classList.add("input-error");
-      image.classList.add("input-error-still-icon");
-    } else {
-      image.classList.remove("input-error");
-      image.classList.remove("input-error-still-icon");
-    }
+      if (errors.image) {
+        image.classList.add("input-error");
+        image.classList.add("input-error-still-icon");
+      } else {
+        image.classList.remove("input-error");
+        image.classList.remove("input-error-still-icon");
+      }
 
-    if (errors.location) {
-      location.classList.add("input-error");
-      location.classList.add("input-error-still-icon");
-    } else {
-      location.classList.remove("input-error");
-      location.classList.remove("input-error-still-icon");
-    }
-  });
+      if (errors.location) {
+        location.classList.add("input-error");
+        location.classList.add("input-error-still-icon");
+      } else {
+        location.classList.remove("input-error");
+        location.classList.remove("input-error-still-icon");
+      }
+    });
+  }, 100);
 
   return (
     <section id="establish-form">
