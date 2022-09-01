@@ -24,7 +24,8 @@ export default function LoginForm() {
   /* const onSubmit = (data) => console.log(data); */
   console.log(errors);
 
-  const [setAuth] = useContext(AuthContext);
+  const [auth, setAuth] = useContext(AuthContext);
+  console.log(auth);
 
   // Gets the data from the login form
   async function onSubmit(data) {
