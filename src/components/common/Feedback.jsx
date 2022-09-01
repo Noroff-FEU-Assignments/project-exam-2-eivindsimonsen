@@ -37,10 +37,10 @@ function Feedback() {
                 <i className="fa-solid fa-star star-colored"></i>
                 <i className="fa-solid fa-star star-colored"></i>
                 <i className="fa-solid fa-star star-colored"></i>
-                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star star-colored"></i>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio facere eos praesentium animi officia dolor harum debitis alias voluptatibus. Illum hic accusamus molestias dolorum. Recusandae?</p>
                 <p className="feedback-user-location">
-                  Visited Farm B&B through <span>Holidaze</span>
+                  Visited Farm BnB through <span>Holidaze</span>
                 </p>
               </div>
             </div>
