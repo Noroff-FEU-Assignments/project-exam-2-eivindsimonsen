@@ -128,3 +128,7 @@ Report template included in the repo.
 
 username: eivindsimonsenjsframeworks.one
 password: Admin1234
+
+# Image url for product creation
+
+https://media-cdn.tripadvisor.com/media/photo-s/1b/fb/12/0c/citybox-bergen.jpg

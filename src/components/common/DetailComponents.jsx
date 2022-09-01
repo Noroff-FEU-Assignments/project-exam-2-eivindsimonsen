@@ -93,10 +93,6 @@ export function AccoBase() {
             <p>Price a day</p>
             <p>{product.price}kr</p>
             <BookingForm btnClass="cta" />
-            <div className="popular-card-feature details-feature">
-              <div>{product.attributes[0].options[0]}</div>
-              <div>{product.attributes[0].options[1]}</div>
-            </div>
           </div>
         </div>
       </Container>

@@ -9,7 +9,7 @@ function AccommodationDetails() {
   return (
     <>
       <Banner bannerclass="banner-image-specific" h1="Book your holiday" h2="Book now, pay later" />
-      <Breadcrumbs prev="Explore" current="Details" />
+      <Breadcrumbs prev="Explore" current="Accommodation" />
       <section id="accommodation-details">
         <AccoBase />
         <AccoDescription />

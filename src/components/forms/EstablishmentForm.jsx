@@ -1,41 +1,66 @@
 import { HeadingTwo } from "../layout/Headings";
 import { useForm } from "react-hook-form";
 import { Button } from "../common/Buttons";
+import { useState } from "react";
+import { Alert } from "react-bootstrap";
 
-export default function App() {
+import { API_PRODUCT_URL, API_CONSUMER_KEY, API_SECRET_KEY } from "../../constants/api";
+import axios from "axios";
+
+const url = API_PRODUCT_URL + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
+
+export default function EstablishmentForm() {
+  const [submitting, setSubmitting] = useState(false);
+  const [postError, setPostError] = useState(null);
+  const [postSuccess, setPostSuccess] = useState(null);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  /* const onSubmit = (data) => console.log(data); */
   console.log(errors);
 
+  async function onSubmit(data) {
+    setSubmitting(true);
+    setPostError(null);
+    setPostSuccess(null);
+
+    console.log(data);
+
+    try {
+      const response = await axios.post(url, data, {
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
+      console.log("Response", response.data);
+      setPostSuccess("Product created!");
+    } catch (error) {
+      setPostError("Could not create, check if values are correct");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   // Validation
-  const accommodationName = document.querySelector(".accommodationName");
-  const keyFeatures = document.querySelector(".keyFeatures");
+  const name = document.querySelector(".accommodationName");
   const description = document.querySelector(".description");
-  const price = document.querySelector(".price");
-  const image = document.querySelector(".image");
-  const location = document.querySelector(".location");
+  const short_description = document.querySelector(".short-description");
+  const regular_price = document.querySelector(".regular_price");
+  const images = document.querySelector(".image");
+  const tags = document.querySelector(".tags");
 
   const formInputs = document.querySelectorAll("input, textarea");
   setTimeout(function () {
     formInputs.forEach(() => {
-      if (errors.accommodationName) {
-        accommodationName.classList.add("input-error");
-        accommodationName.classList.add("input-error-still-icon");
+      if (errors.name) {
+        name.classList.add("input-error");
+        name.classList.add("input-error-still-icon");
       } else {
-        accommodationName.classList.remove("input-error");
-        accommodationName.classList.remove("input-error-still-icon");
-      }
-
-      if (errors.keyFeatures) {
-        keyFeatures.classList.add("input-error");
-        keyFeatures.classList.add("input-error-still-icon");
-      } else {
-        keyFeatures.classList.remove("input-error");
-        keyFeatures.classList.remove("input-error-still-icon");
+        name.classList.remove("input-error");
+        name.classList.remove("input-error-still-icon");
       }
 
       if (errors.description) {
@@ -46,28 +71,36 @@ export default function App() {
         description.classList.remove("input-error-still-icon");
       }
 
-      if (errors.price) {
-        price.classList.add("input-error");
-        price.classList.add("input-error-still-icon");
+      if (errors.short_description) {
+        short_description.classList.add("input-error");
+        short_description.classList.add("input-error-still-icon");
       } else {
-        price.classList.remove("input-error");
-        price.classList.remove("input-error-still-icon");
+        short_description.classList.remove("input-error");
+        short_description.classList.remove("input-error-still-icon");
       }
 
-      if (errors.image) {
-        image.classList.add("input-error");
-        image.classList.add("input-error-still-icon");
+      if (errors.regular_price) {
+        regular_price.classList.add("input-error");
+        regular_price.classList.add("input-error-still-icon");
       } else {
-        image.classList.remove("input-error");
-        image.classList.remove("input-error-still-icon");
+        regular_price.classList.remove("input-error");
+        regular_price.classList.remove("input-error-still-icon");
       }
 
-      if (errors.location) {
-        location.classList.add("input-error");
-        location.classList.add("input-error-still-icon");
+      if (errors.images) {
+        images.classList.add("input-error");
+        images.classList.add("input-error-still-icon");
       } else {
-        location.classList.remove("input-error");
-        location.classList.remove("input-error-still-icon");
+        images.classList.remove("input-error");
+        images.classList.remove("input-error-still-icon");
+      }
+
+      if (errors.tags) {
+        tags.classList.add("input-error");
+        tags.classList.add("input-error-still-icon");
+      } else {
+        tags.classList.remove("input-error");
+        tags.classList.remove("input-error-still-icon");
       }
     });
   }, 100);
@@ -77,33 +110,37 @@ export default function App() {
       <HeadingTwo title="Create an establishment" />
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form establish-form">
         <div>
-          {errors.accommodationName && <span>Accommodation name is required</span>}
-          <input type="text" placeholder="Accommodation Name" className="accommodationName" {...register("accommodationName", { required: true, max: 20, min: 5, maxLength: 80 })} />
+          {errors.name && <span>Accommodation name is required</span>}
+          <input name="name" type="text" placeholder="Accommodation Name" className="accommodationName" {...register("name", { required: true, max: 20, min: 5, maxLength: 80 })} />
 
-          {errors.keyFeatures && <span>Add key features</span>}
-          <input type="text" placeholder="Key features" className="keyFeatures" {...register("keyFeatures", { required: true, max: 20, min: 5, maxLength: 100 })} />
+          {errors.short_description && <span>Short description is required</span>}
+          <textarea name="short_description" type="text" placeholder="Short description" className="short-description" {...register("short_description", { required: true, max: 60, min: 100 })} />
 
           {errors.description && <span>Description is required</span>}
-          <textarea placeholder="Description" className="description" {...register("description", { required: true, max: 100, min: 20 })} />
+          <textarea name="description" placeholder="Main Description" className="description" {...register("description", { required: true, max: 100, min: 20 })} />
         </div>
+
         <div>
-          {errors.price && <span>Price is required</span>}
-          <input type="number" placeholder="Price" className="price" {...register("price", { required: true, maxLength: 12 })} />
+          {errors.regular_price && <span>Price is required</span>}
+          <input name="regular_price" type="number" placeholder="Price" className="regular_price" {...register("regular_price", { required: true, maxLength: 12 })} />
 
-          {errors.location && <span>Location is required</span>}
-          <input type="text" placeholder="Location" className="location" {...register("location", { required: true, max: 60, min: 1 })} />
+          {errors.tags && <span>Location is required</span>}
+          <input name="tags.0.name" type="text" placeholder="Location" className="tags" {...register("tags.0.name", { required: true, max: 60, min: 1 })} />
 
-          <label htmlFor="image">Image</label>
-          {errors.image && <span>A URL image is required</span>}
-          <input type="file" className="image" {...register("image", { required: true })} />
+          <label htmlFor="image">Image Url</label>
+          {errors.images && <span>A URL image is required</span>}
+          <input name="images.0.src" type="url" className="image" {...register("images.0.src", { required: true })} />
+
           <div>
-            <input type="range" placeholder="Rating" {...register("Rating", {})} />
+            <input type="range" placeholder="Rating" {...register("rating", {})} />
 
             <div className="contact-form-button">
-              <Button btnClass="cta" btnText="Create" />
+              <Button btnClass="cta" btnText={submitting ? "Creating" : "Create"} />
             </div>
           </div>
         </div>
+        {postError && <Alert variant="danger">{postError}</Alert>}
+        {postSuccess && <Alert variant="success">{postSuccess}</Alert>}
       </form>
     </section>
   );

@@ -18,11 +18,11 @@ function AdminDashboard() {
       {auth ? (
         <>
           <NavLink to="/admin" className="admin-link nav-link">
-            <i class="fa-solid fa-user"></i>
+            <i className="fa-solid fa-user"></i>
             Admin
           </NavLink>
           <NavLink to="/enquiries" className="enquiries-link nav-link">
-            <i class="fa-solid fa-book"></i>
+            <i className="fa-solid fa-book"></i>
             Enquiries
           </NavLink>
           <button className="cta cta--nav" onClick={logout}>

@@ -175,8 +175,11 @@ table {
 }
 
 // Alerts
-.alert-danger {
-  margin: 20px auto;
+.alert-danger,
+.alert-success {
+  margin: 20px auto !important;
+  text-align: center;
+  flex-basis: 100%;
 }
 
 // ------------ Breadcrumbs ------------
