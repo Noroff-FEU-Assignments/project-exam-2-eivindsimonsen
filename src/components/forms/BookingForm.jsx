@@ -106,7 +106,7 @@ export default function BookingForm({ btnClass }) {
             </div>
 
             <div className="contact-form-button">
-              <MyButton btnClass="cta" btnText={submitting ? "Creating" : "Create"} />
+              <MyButton btnClass="cta" btnText={submitting ? "Booking.." : "Reserve now"} />
             </div>
             {bookingError && <Alert variant="danger">{bookingError}</Alert>}
             {bookingSuccess && <Alert variant="success">{bookingSuccess}</Alert>}
