@@ -67,42 +67,42 @@ export default function BookingForm({ btnClass }) {
           <form onSubmit={handleSubmit(onSubmit)} className="booking-form">
             <div className="booking-form-input">
               <i className="fa-solid fa-user form-icons"></i>
-              {errors.name && <span>Please fill out a name</span>}
-              <input name="name" type="text" placeholder="First name" className="firstNameBooking" {...register("billing.first_name", { required: true })} />
+              {errors.first_name && <span>{errors.first_name.message}</span>}
+              <input name="first_name" type="text" placeholder="First name" className="firstNameBooking" {...register("billing.first_name", { required: true })} />
             </div>
 
             <div className="booking-form-input">
               <i className="fa-solid fa-hotel form-icons"></i>
-              {errors.name && <span>Please fill out a name</span>}
-              <input name="name" type="text" placeholder="Accommodation name" className="accommodation-name" {...register("billing.last_name", { required: true })} />
+              {errors.last_name && <span>{errors.last_name.message}</span>}
+              <input name="last_name" type="text" placeholder="Accommodation name" className="accommodation-name" {...register("billing.last_name", { required: true })} />
             </div>
 
             <div className="booking-form-input">
               <i className="fa-solid fa-envelope form-icons"></i>
-              {errors.email && <span>Please fill out a name</span>}
-              <input name="email" type="text" placeholder="Email" className="emailBooking" {...register("billing.email", { required: true, pattern: /^\S+@\S+$/i })} />
+              {errors.email && <span>{errors.email.message}</span>}
+              <input name="email" type="text" placeholder="Email" className="email" {...register("billing.email", { required: true, pattern: /^\S+@\S+$/i })} />
             </div>
 
             <div className="booking-form-input">
               <i className="fa-solid fa-phone form-icons"></i>
-              {errors.phone && <span>Please fill out a name</span>}
-              <input name="phone" type="tel" placeholder="Mobile number" className="number" {...register("billing.phone", { required: true })} />
+              {errors.phone && <span>{errors.phone.message}</span>}
+              <input name="phone" type="tel" placeholder="Mobile number" className="phone" {...register("billing.phone", { required: true })} />
             </div>
 
             <div className="booking-form-input">
-              {errors.fromDate && <span>Please fill out a name</span>}
-              <input name="fromDate" type="datetime-local" placeholder="From date" className="fromDate" {...register("billing.address_1", { required: true })} />
+              {errors.address_1 && <span>{errors.address_1.message}</span>}
+              <input name="address_1" type="datetime-local" placeholder="From date" className="address_1" {...register("billing.address_1", { required: true })} />
             </div>
 
             <div className="booking-form-input">
-              {errors.toDate && <span>Please fill out a name</span>}
-              <input name="toDate" type="datetime-local" placeholder="To" className="toDate" {...register("billing.address_2", { required: true })} />
+              {errors.address_2 && <span>{errors.address_2.message}</span>}
+              <input name="address_2" type="datetime-local" placeholder="To" className="address_2" {...register("billing.address_2", { required: true })} />
             </div>
 
             <div className="booking-form-input">
               <i className="fa-solid fa-users form-icons"></i>
-              {errors.quantity && <span>Please fill out a name</span>}
-              <input name="quantity" type="number" placeholder="Persons" className="persons" {...register("billing.company", { required: true })} />
+              {errors.company && <span>{errors.company.message}</span>}
+              <input name="company" type="number" placeholder="Persons" className="company" {...register("billing.company", { required: true })} />
             </div>
 
             <div className="contact-form-button">
