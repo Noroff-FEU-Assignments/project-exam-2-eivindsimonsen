@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { Button } from "../common/Buttons";
 import { useContext, useState } from "react";
 import axios from "axios";
-import { API_URL, API_TOKEN_PATH } from "../../constants/api";
+import { BASE_API_URL, API_TOKEN_PATH } from "../../constants/api";
 import { Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 
-const url = API_URL + API_TOKEN_PATH;
+const url = BASE_API_URL + API_TOKEN_PATH;
 
 export default function LoginForm() {
   const [submitting, setSubmitting] = useState(false);

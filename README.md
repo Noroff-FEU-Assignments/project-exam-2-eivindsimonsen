@@ -132,3 +132,5 @@ password: Admin1234
 # Image url for product creation
 
 https://media-cdn.tripadvisor.com/media/photo-s/1b/fb/12/0c/citybox-bergen.jpg
+
+https://www.eivindsimonsenjsframeworks.one/wp-content/uploads/2022/08/nick-night-LDvZK-3ZFRQ-unsplash.jpg

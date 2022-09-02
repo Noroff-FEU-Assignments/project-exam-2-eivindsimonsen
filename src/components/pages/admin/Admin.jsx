@@ -20,8 +20,6 @@ function Admin() {
         <section id="user-messages">
           <HeadingThree title="User messages and questions" />
           <UserMessage />
-          <UserMessage />
-          <UserMessage />
         </section>
       </section>
     </>
