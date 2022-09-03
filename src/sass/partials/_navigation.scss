@@ -114,6 +114,55 @@ a {
   top: 12px;
 }
 
+// ------------ Nav search bar typeahead ------------
+
+.search-bar-input {
+  position: relative;
+
+  &:focus {
+    border-radius: 7px 7px 0px 0px;
+  }
+}
+
+.searchbar-typeahead {
+  position: absolute;
+  z-index: 1000;
+  background-color: $main-background;
+  width: 100%;
+  top: 46px;
+  border: 1px solid $fourth-background;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 7px 7px;
+  max-height: 400px;
+  overflow: overlay;
+
+  &-links {
+    color: $text-color;
+    font-size: 1.6rem;
+    padding: 20px;
+
+    & > i {
+      color: $accent;
+      margin-left: 20px;
+    }
+
+    & span {
+      color: $accent;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      margin: 0px auto;
+      border: 1px solid $secondary-background;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
 // ------------ Nav icons ------------
 .nav-icons {
   @media (min-width: 992px) {

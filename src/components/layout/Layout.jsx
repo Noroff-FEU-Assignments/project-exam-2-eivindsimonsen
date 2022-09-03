@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Form from "react-bootstrap/Form";
 
 import Home from "../pages/home/Home";
 import Explore from "../pages/explore/Explore";
@@ -42,6 +42,11 @@ function Layout() {
                   <label htmlFor="search">
                     <i className="fa-solid fa-magnifying-glass"></i>
                   </label>
+                  <div className="searchbar-typeahead">
+                    <Link to="/explore/accommodationdetails/:id" className="searchbar-typeahead-links">
+                      Hotel Bristol | <span>599kr</span> <i className="fa-solid fa-arrow-right"></i>
+                    </Link>
+                  </div>
                 </Form>
                 <Nav className="me-auto my-2 my-lg-0 nav-icons" navbarScroll>
                   <NavLink to="/" className="home-link nav-link">
