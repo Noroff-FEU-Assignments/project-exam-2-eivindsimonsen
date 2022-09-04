@@ -124,7 +124,6 @@ a {
 }
 
 .searchbar-typeahead {
-  @include shadow-elevation-medium;
   position: absolute;
   z-index: 1000;
   background-color: $main-background;
@@ -161,7 +160,8 @@ a {
 
     &:hover {
       color: $accent;
-      transform: translateX(1%);
+      /* transform: translateX(1%); */
+      margin-left: 10px;
       transition: 0.3s;
     }
   }
