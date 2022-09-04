@@ -185,7 +185,13 @@ table {
 // ------------ Breadcrumbs ------------
 .breadcrumb {
   align-items: center;
-  margin-left: 100px;
+  justify-content: center;
+
+  @media (min-width: 1044px) {
+    justify-content: flex-start;
+    margin-left: 100px;
+  }
+
   & a {
     color: $text-color;
   }

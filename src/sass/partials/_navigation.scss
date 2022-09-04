@@ -115,7 +115,6 @@ a {
 }
 
 // ------------ Nav search bar typeahead ------------
-
 .search-bar-input {
   position: relative;
 
@@ -125,28 +124,27 @@ a {
 }
 
 .searchbar-typeahead {
+  @include shadow-elevation-medium;
   position: absolute;
   z-index: 1000;
   background-color: $main-background;
   width: 100%;
   top: 46px;
-  border: 1px solid $fourth-background;
   text-align: center;
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 7px 7px;
   max-height: 400px;
   overflow: overlay;
+  border-left: 1px solid $fourth-background;
+  border-bottom: 1px solid $fourth-background;
+  border-right: 1px solid $fourth-background;
 
-  &-links {
+  & a {
     color: $text-color;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     padding: 20px;
-
-    & > i {
-      color: $accent;
-      margin-left: 20px;
-    }
+    transition: 0.3s;
 
     & span {
       color: $accent;
@@ -159,6 +157,12 @@ a {
       border: 1px solid $secondary-background;
       display: flex;
       flex-direction: column;
+    }
+
+    &:hover {
+      color: $accent;
+      transform: translateX(1%);
+      transition: 0.3s;
     }
   }
 }

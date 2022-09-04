@@ -3,6 +3,7 @@ import { HeadingTwo, HeadingThree, HeadingFour } from "../layout/Headings";
 import { Container } from "react-bootstrap";
 import Loader from "./Loader";
 import Alert from "react-bootstrap/Alert";
+import Breadcrumbs from "../common/Breadcrumbs";
 
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -67,36 +68,39 @@ export function AccoBase() {
 
   // No need for mapping, because we only retrieve one item from the API
   return (
-    <section id="accommodation-base">
-      <Container className="acco-wrapper">
-        <div className="detail-name-rating">
-          <div>
-            <HeadingTwo title={product.name} />
+    <>
+      <section id="accommodation-base">
+        <Breadcrumbs prev="Explore" current={product.name} />
+        <Container className="acco-wrapper">
+          <div className="detail-name-rating">
+            <div>
+              <HeadingTwo title={product.name} />
+            </div>
+            <div>
+              <i className="fa-solid fa-star star-colored"></i>
+              <i className="fa-solid fa-star star-colored"></i>
+              <i className="fa-solid fa-star star-colored"></i>
+              <i className="fa-solid fa-star star-colored"></i>
+              <i className="fa-solid fa-star star-colored"></i>
+            </div>
           </div>
-          <div>
-            <i className="fa-solid fa-star star-colored"></i>
-            <i className="fa-solid fa-star star-colored"></i>
-            <i className="fa-solid fa-star star-colored"></i>
-            <i className="fa-solid fa-star star-colored"></i>
-            <i className="fa-solid fa-star star-colored"></i>
+          <div className="detail-text">
+            <p className="detail-text-address">{product.tags[0].name}</p>
+            <p dangerouslySetInnerHTML={{ __html: product.short_description }}></p>
           </div>
-        </div>
-        <div className="detail-text">
-          <p className="detail-text-address">{product.tags[0].name}</p>
-          <p dangerouslySetInnerHTML={{ __html: product.short_description }}></p>
-        </div>
-        <div className="detail-image-box">
-          <div>
-            <img src={product.images[0].src} alt={product.images[0].alt} />
+          <div className="detail-image-box">
+            <div>
+              <img src={product.images[0].src} alt={product.images[0].alt} />
+            </div>
+            <div className="detail-image-box--dark">
+              <p>Price a day</p>
+              <p>{product.price}kr</p>
+              <BookingForm btnClass="cta" />
+            </div>
           </div>
-          <div className="detail-image-box--dark">
-            <p>Price a day</p>
-            <p>{product.price}kr</p>
-            <BookingForm btnClass="cta" />
-          </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </>
   );
 }
 

@@ -1,5 +1,4 @@
 import Banner from "../../common/Banner";
-import Breadcrumbs from "../../common/Breadcrumbs";
 import { AccoBase, AccoDescription, AccoImages } from "../../common/DetailComponents";
 import { Container } from "react-bootstrap";
 import Feedback from "../../common/Feedback";
@@ -9,7 +8,6 @@ function AccommodationDetails() {
   return (
     <>
       <Banner bannerclass="banner-image-specific" h1="Book your holiday" h2="Book now, pay later" />
-      <Breadcrumbs prev="Explore" current="Accommodation" />
       <section id="accommodation-details">
         <AccoBase />
         <AccoDescription />
