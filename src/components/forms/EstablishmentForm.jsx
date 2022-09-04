@@ -130,7 +130,7 @@ export default function EstablishmentForm() {
 
           <label htmlFor="rating">Rating</label>
           <div className="rating-slider">
-            <input type="range" placeholder="Rating" className="rating" {...register("rating", {})} />
+            <input type="range" {...register("rating", {})} />
             <div className="popular-card-rating">
               <i className="fa-solid fa-star star-colored"></i>
               <i className="fa-solid fa-star star-colored"></i>
