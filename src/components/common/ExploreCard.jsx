@@ -12,7 +12,7 @@ function ExploreCard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = API_PRODUCT_URL + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY;
+  const url = API_PRODUCT_URL + "?" + API_CONSUMER_KEY + "&" + API_SECRET_KEY + "&per_page=30";
 
   useEffect(
     // function that will run every time the component renders
