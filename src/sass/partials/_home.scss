@@ -43,36 +43,6 @@
     margin: 20px auto;
   }
 
-  &-box-user {
-    width: 150px;
-    height: 150px;
-    background-color: $main-background;
-    border-radius: 50%;
-    margin: 20px auto;
-    position: relative;
-
-    & > .fa-user {
-      font-size: 4rem;
-      position: absolute;
-      bottom: 45px;
-      left: 50px;
-      color: $text-color;
-    }
-
-    @media (min-width: 992px) {
-      width: 200px;
-      height: 200px;
-
-      & > .fa-user {
-        font-size: 6rem;
-        position: absolute;
-        bottom: 55px;
-        left: 60px;
-        color: $text-color;
-      }
-    }
-  }
-
   &-box-info {
     max-width: 300px;
 
@@ -91,6 +61,10 @@
       color: $accent;
     }
   }
+}
+
+#message-user-picture {
+  display: flex;
 }
 
 // ------------ Carousel section ------------
@@ -149,6 +123,7 @@
     margin-bottom: 15px;
     border-radius: 50%;
     width: 150px;
+    height: 150px;
     margin-right: 20px;
   }
 

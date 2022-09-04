@@ -1,4 +1,6 @@
 import { HeadingFour } from "../layout/Headings";
+import profileImg1 from "../../images/profileImgTwo.jpg";
+import profileImg2 from "../../images/profileImgThree.jpg";
 
 function Feedback() {
   return (
@@ -7,8 +9,8 @@ function Feedback() {
         <div className="feedback">
           <div className="feedback-box">
             <div>
-              <div className="feedback-box-user">
-                <i className="fa-solid fa-user"></i>
+              <div className="quote-block" id="message-user-picture">
+                <img src={profileImg1} alt="A users profile headshot" />
               </div>
               <div className="feedback-box-info">
                 <HeadingFour title="Kari Nordmann" />
@@ -28,8 +30,8 @@ function Feedback() {
         <div className="feedback">
           <div className="feedback-box">
             <div>
-              <div className="feedback-box-user">
-                <i className="fa-solid fa-user"></i>
+              <div className="quote-block" id="message-user-picture">
+                <img src={profileImg2} alt="A users profile headshot" />
               </div>
               <div className="feedback-box-info">
                 <HeadingFour title="Ola Nordmann" />
