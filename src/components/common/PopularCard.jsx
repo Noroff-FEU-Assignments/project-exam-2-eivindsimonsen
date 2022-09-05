@@ -78,7 +78,7 @@ function PopularCard() {
                   <i className="fa-solid fa-star star-colored"></i>
                   <i className="fa-solid fa-star star-colored"></i>
                   <i className="fa-solid fa-star star-colored"></i>
-                  <i className="fa-solid fa-star star-colored"></i>
+                  <i className="fa-solid fa-star"></i>
                 </div>
                 <div className="popular-card-footer">
                   <p>{item.price}kr / day</p>

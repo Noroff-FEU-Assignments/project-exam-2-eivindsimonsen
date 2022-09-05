@@ -1,25 +1,12 @@
 // ------------ Global styles ------------
-#root {
-  //Style for sticking footer to bottom of the page
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 
 html,
 body {
   font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
-  //Style for sticking footer to bottom of the page
-  height: 100%;
 }
 
 // ------------ Wrappers ------------
-.wrapper {
-  // style for sticking footer to the bottom
-  flex: 1 0 auto;
-}
-
 #accommodations,
 #accommodation-details,
 #admin-panel {
@@ -163,6 +150,9 @@ table {
 }
 
 // ------------ Icons ------------
+.fa-star {
+  color: $text-color;
+}
 .star-colored {
   color: $accent;
 }
@@ -207,8 +197,6 @@ table {
 
 // ------------ Footer ------------
 footer {
-  //Style for sticking footer to bottom of the page
-  flex-shrink: 0;
   background-color: $third-background;
   padding: 50px;
   margin-top: 100px;
@@ -216,6 +204,21 @@ footer {
   & > h4 {
     color: $main-background;
   }
+
+  & a {
+    color: $main-background !important;
+    transition: 0.3s;
+    transform: translateY(0%);
+
+    &:hover {
+      transform: translateY(-10%);
+      transition: 0.3s;
+    }
+  }
+}
+
+#toTop {
+  margin-top: 40px;
 }
 
 .bottom-footer {

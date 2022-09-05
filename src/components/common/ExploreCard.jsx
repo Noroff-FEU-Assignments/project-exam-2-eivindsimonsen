@@ -71,7 +71,8 @@ function ExploreCard() {
                     <i className="fa-solid fa-star star-colored"></i>
                     <i className="fa-solid fa-star star-colored"></i>
                     <i className="fa-solid fa-star star-colored"></i>
-                    <i className="fa-solid fa-star star-colored"></i>
+                    <i className="fa-solid fa-star"></i>
+                    <p className="reviews">34 reviews</p>
                   </div>
                 </div>
                 <div>

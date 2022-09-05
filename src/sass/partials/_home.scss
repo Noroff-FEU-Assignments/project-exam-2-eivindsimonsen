@@ -55,11 +55,6 @@
     font-size: 1.2rem;
     text-align: center;
     margin-top: 40px;
-
-    & span {
-      font-size: 1.6rem;
-      color: $accent;
-    }
   }
 }
 
@@ -75,7 +70,8 @@
     margin-bottom: 20px;
   }
 
-  & q {
+  & q,
+  & p {
     font-size: 1.5rem;
     color: $text-color;
     opacity: 0.8;
@@ -107,17 +103,13 @@
   @media (max-width: 1200px) {
     border: 2.5px solid $accent;
   }
-
-  &-control-prev > span,
-  &-control-next > span {
-    background-color: $text-color;
-  }
 }
 
 .quote-block {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   & img {
     margin-bottom: 15px;
@@ -127,7 +119,7 @@
     margin-right: 20px;
   }
 
-  @media (min-width: 1044px) {
-    display: block;
+  @media (min-width: 621px) {
+    flex-direction: row;
   }
 }

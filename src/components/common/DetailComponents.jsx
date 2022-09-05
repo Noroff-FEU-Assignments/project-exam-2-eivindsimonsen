@@ -81,7 +81,8 @@ export function AccoBase() {
               <i className="fa-solid fa-star star-colored"></i>
               <i className="fa-solid fa-star star-colored"></i>
               <i className="fa-solid fa-star star-colored"></i>
-              <i className="fa-solid fa-star star-colored"></i>
+              <i className="fa-solid fa-star"></i>
+              <p className="reviews">34 reviews</p>
             </div>
           </div>
           <div className="detail-text">
@@ -153,7 +154,7 @@ export function AccoDescription() {
 
   // Display loading indicator until products load
   if (loading) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   // Display message in dom if error state has a value
@@ -223,7 +224,7 @@ export function AccoImages() {
 
   // Display loading indicator until products load
   if (loading) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   // Display message in dom if error state has a value

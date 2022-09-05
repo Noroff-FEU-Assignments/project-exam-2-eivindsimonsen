@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import useAxios from "../../hooks/useAxios";
 import { useState } from "react";
 import { Alert } from "react-bootstrap";
+import { HashLink } from "react-router-hash-link";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
@@ -114,8 +115,14 @@ function ContactForm() {
       <div className="contact-form-button">
         <Button btnClass="cta" btnText={submitting ? "Sending.." : "Send"} />
       </div>
+
       {serverError && <Alert variant="danger">{serverError}</Alert>}
       {serverSuccess && <Alert variant="success">{serverSuccess}</Alert>}
+
+      <HashLink to="#navigation" className="nav-link" id="toTop">
+        <i className="fa-solid fa-arrow-up"></i>
+        To the top
+      </HashLink>
     </form>
   );
 }

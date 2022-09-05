@@ -2,7 +2,7 @@ import { HeadingFour } from "../layout/Headings";
 import profileImg1 from "../../images/profileImgTwo.jpg";
 import profileImg2 from "../../images/profileImgThree.jpg";
 
-function Feedback() {
+function Feedback({ visitedFrom1, visitedFrom2 }) {
   return (
     <>
       <div className="feedback-position">
@@ -20,9 +20,7 @@ function Feedback() {
                 <i className="fa-solid fa-star star-colored"></i>
                 <i className="fa-solid fa-star"></i>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio facere eos praesentium animi officia dolor harum debitis alias voluptatibus. Illum hic accusamus molestias dolorum. Recusandae?</p>
-                <p className="feedback-user-location">
-                  Visited Hotel Bristol through <span>Holidaze</span>
-                </p>
+                <p className="feedback-user-location">{visitedFrom1}</p>
               </div>
             </div>
           </div>
@@ -41,9 +39,7 @@ function Feedback() {
                 <i className="fa-solid fa-star star-colored"></i>
                 <i className="fa-solid fa-star star-colored"></i>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio facere eos praesentium animi officia dolor harum debitis alias voluptatibus. Illum hic accusamus molestias dolorum. Recusandae?</p>
-                <p className="feedback-user-location">
-                  Visited Farm BnB through <span>Holidaze</span>
-                </p>
+                <p className="feedback-user-location">{visitedFrom2}</p>
               </div>
             </div>
           </div>

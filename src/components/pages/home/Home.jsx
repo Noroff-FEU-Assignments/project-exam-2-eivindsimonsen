@@ -23,12 +23,12 @@ function Home() {
       <section id="feedback-messages">
         <Container>
           <HeadingThree title="Messages from Holidaze users" />
-          <Feedback />
+          <Feedback visitedFrom1="Visited Hotel Bristol through Holidaze" visitedFrom2="Visited Castle BnB through Holidaze" />
         </Container>
       </section>
       <section id="carousel">
         <Container className="carousel-container">
-          <Quote text="Bergen City must be one of the most beautiful places I've ever been!" profileImg={userProfile} />
+          <Quote text="Bergen City must be one of the most beautiful places I've ever been!" profileImg={userProfile} user="-Jackie" />
           <CarouselSlider />
         </Container>
       </section>

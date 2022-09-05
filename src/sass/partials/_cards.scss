@@ -138,10 +138,14 @@
     flex-direction: row;
     width: inherit;
     padding: 80px;
+    align-items: center;
 
     &-img > img {
       width: 350px;
-      border-radius: 5px;
     }
   }
+}
+
+.reviews {
+  font-size: 1rem;
 }
