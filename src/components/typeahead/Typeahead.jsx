@@ -37,6 +37,10 @@ function Typeahead() {
         matchList.style.display = "none";
       }
 
+      /* if (matches === []) {
+        matchList.innerHTML = "No what is this?";
+      } */
+
       // Call the function which creates the html
       outputHtml(matches);
     };
@@ -48,6 +52,8 @@ function Typeahead() {
 
         // Set the mapped result into the matchList dom
         matchList.innerHTML = html;
+      } else {
+        matchList.innerHTML = "<p>No available accommodation...</p>";
       }
     };
 

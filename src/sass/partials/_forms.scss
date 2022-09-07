@@ -113,6 +113,25 @@ form {
   align-items: center;
 }
 
+// ------------ Login form styles ------------
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include shadow-elevation-medium;
+  padding: 100px 20px;
+  transition: 0.3s;
+
+  &:hover {
+    @include shadow-elevation-high;
+    transition: 0.3s;
+  }
+
+  @media (min-width: 621px) {
+    padding: 100px;
+  }
+}
+
 // ------------ Range slider styles ------------
 
 input[type="range"] {
