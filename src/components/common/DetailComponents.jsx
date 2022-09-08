@@ -242,13 +242,13 @@ export function AccoImages() {
             <img src={product.images[0].src} alt={product.images[0].alt} />
           </div>
           <div className="acco-images-thumbnail">
-            <div className="acco-images-sub">
+            <div>
               <img src={product.images[0].src} alt={product.images[0].alt} />
             </div>
-            <div className="acco-images-sub">
+            <div>
               <img src={product.images[0].src} alt={product.images[0].alt} />
             </div>
-            <div className="acco-images-sub">
+            <div>
               <img src={product.images[0].src} alt={product.images[0].alt} />
             </div>
           </div>
