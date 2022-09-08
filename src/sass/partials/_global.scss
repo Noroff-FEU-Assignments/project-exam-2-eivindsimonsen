@@ -7,6 +7,18 @@ body {
 }
 
 // ------------ Wrappers ------------
+#root {
+  // Will place the footer at the bottom
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  // Will place the footer at the bottom
+  margin-top: auto;
+}
+
 #accommodations,
 #accommodation-details,
 #admin-panel {
@@ -196,6 +208,7 @@ table {
 }
 
 // ------------ Footer ------------
+
 footer {
   background-color: $third-background;
   padding: 50px;
