@@ -138,10 +138,15 @@ a {
   border-left: 1px solid $fourth-background;
   border-bottom: 1px solid $fourth-background;
   border-right: 1px solid $fourth-background;
+  align-items: flex-start;
+
+  & p {
+    margin: 10px auto;
+  }
 
   & a {
     color: $text-color;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 20px;
     transition: 0.3s;
 
@@ -149,10 +154,16 @@ a {
       color: $accent;
     }
 
+    & img {
+      width: 60px;
+      border-radius: 5px;
+      margin: 0px 10px;
+    }
+
     &::after {
       content: "";
       width: 100%;
-      margin: 0px auto;
+      margin: 10px auto;
       border: 1px solid $secondary-background;
       display: flex;
       flex-direction: column;
@@ -160,7 +171,7 @@ a {
 
     &:hover {
       color: $accent;
-      margin-left: 10px;
+      margin-left: 5px;
       transition: 0.3s;
     }
   }

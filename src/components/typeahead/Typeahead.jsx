@@ -48,7 +48,7 @@ function Typeahead() {
     // Map through the filtered API and display html accordingly
     const outputHtml = (matches) => {
       if (matches.length > 0) {
-        const html = matches.map((match) => `<a href="/explore/accommodationDetails/${match.id}">${match.name} | <span>${match.price}kr</span></a>`).join("");
+        const html = matches.map((match) => `<a href="/explore/accommodationDetails/${match.id}"><img src=${match.images[0].src} class="banan" alt=${match.images[0].alt} />${match.name} | <span>${match.price}kr</span></a>`).join("");
 
         // Set the mapped result into the matchList dom
         matchList.innerHTML = html;
