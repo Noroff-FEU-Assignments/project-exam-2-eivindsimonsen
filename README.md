@@ -1,9 +1,10 @@
 # Login details
 
 username: eivindsimonsenjsframeworks.one
+
 password: Admin1234
 
-# Image urls for product creation
+## Image urls for product creation
 
 https://media-cdn.tripadvisor.com/media/photo-s/1b/fb/12/0c/citybox-bergen.jpg
 
