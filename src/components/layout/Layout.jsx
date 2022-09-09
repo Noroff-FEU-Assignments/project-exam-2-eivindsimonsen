@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { useState } from "react";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -19,6 +20,12 @@ import ScrollToTop from "../common/ScrollToTop";
 import AdminDashboard from "./AdminDashboard";
 
 function Layout() {
+  // Changes the hamburger icon to X icon when clicked
+  const [toggle, setToggle] = useState(false);
+  const toggleIcon = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
       <Router>
@@ -34,7 +41,7 @@ function Layout() {
               </Navbar.Brand>
             </NavLink>
             <Navbar.Toggle aria-controls="responsive-navbar-nav">
-              <i className="fa-solid fa-bars hamburger-menu"></i>
+              <i className={"fa-solid fa-bars hamburger-menu" + (toggle ? "fa-solid fa-xmark hamburger-menu" : "")} onClick={toggleIcon}></i>
             </Navbar.Toggle>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Form className="d-flex search-bar">
