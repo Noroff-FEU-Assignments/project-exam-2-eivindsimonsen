@@ -37,10 +37,6 @@ function Typeahead() {
         matchList.style.display = "none";
       }
 
-      /* if (matches === []) {
-        matchList.innerHTML = "No what is this?";
-      } */
-
       // Call the function which creates the html
       outputHtml(matches);
     };

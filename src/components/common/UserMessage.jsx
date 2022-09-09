@@ -60,7 +60,7 @@ function UserMessage() {
             <div className="user-message-credentials">
               <div>
                 <p>{posts.title.rendered}</p>
-                <p>{posts.slug}</p>
+                <p>{posts.slug.replaceAll("-", ".")}</p>
               </div>
               <span>
                 <p dangerouslySetInnerHTML={{ __html: posts.excerpt.rendered }}></p>
