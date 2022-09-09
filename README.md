@@ -1,3 +1,14 @@
+# Login details
+
+username: eivindsimonsenjsframeworks.one
+password: Admin1234
+
+# Image urls for product creation
+
+https://media-cdn.tripadvisor.com/media/photo-s/1b/fb/12/0c/citybox-bergen.jpg
+
+https://www.eivindsimonsenjsframeworks.one/wp-content/uploads/2022/08/nick-night-LDvZK-3ZFRQ-unsplash.jpg
+
 # Project Exam 2
 
 There are two options with this Project Exam.
@@ -123,14 +134,3 @@ End of week 7: Report with link to website or a Github link and feedback from co
 Report template included in the repo.
 
 [Video on deploying Strapi to Heroku](https://vimeo.com/689226140/9b378e06b2)
-
-# Login details
-
-username: eivindsimonsenjsframeworks.one
-password: Admin1234
-
-# Image url for product creation
-
-https://media-cdn.tripadvisor.com/media/photo-s/1b/fb/12/0c/citybox-bergen.jpg
-
-https://www.eivindsimonsenjsframeworks.one/wp-content/uploads/2022/08/nick-night-LDvZK-3ZFRQ-unsplash.jpg
