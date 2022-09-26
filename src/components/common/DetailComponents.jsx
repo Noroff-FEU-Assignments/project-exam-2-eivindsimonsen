@@ -236,7 +236,7 @@ export function AccoImages() {
   return (
     <section id="accommodation-images">
       <Container className="acco-wrapper">
-        <div className="acco-images">
+        <div className="acco-images heading-margin">
           <HeadingFour title="Gallery" />
           <div className="acco-images-active">
             <img src={product.images[0].src} alt={product.images[0].alt} />
