@@ -28,8 +28,6 @@ export default function EstablishmentForm() {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
-  /* const onSubmit = (data) => console.log(data); */
-  /* console.log(errors); */
 
   async function onSubmit(data) {
     setSubmitting(true);
