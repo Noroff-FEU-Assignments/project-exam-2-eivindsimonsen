@@ -81,11 +81,18 @@ List the ready features here:
 ## Setup
 
 To install and start the project:
-`npm install npm start`
+
+```
+npm install
+npm start
+```
 
 ## Login
 
-`username: eivindsimonsenjsframeworks.one password: Admin1234`
+```
+username: eivindsimonsenjsframeworks.one
+password: Admin1234
+```
 
 ## Project Status
 
